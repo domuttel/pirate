@@ -1,0 +1,16 @@
+{
+  "name": "update-me",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-sass": "^2.3.2",
+    "jshint-stylish": "^2.0.1"
+  }
+}
