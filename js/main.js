@@ -1,5 +1,8 @@
 // add scripts
 
 $(document).on('ready', function() {
-  console.log('sanity check!');
+  $(".menu-collapsed").click(function() {
+    $(this).toggleClass("menu-expanded");
+  });
+  
 });

@@ -1,0 +1,22 @@
+@import "components/index";
+@import "base/index";
+
+
+$dark: black;
+$light: white;
+
+
+
+
+body{
+  @include heavy;
+  box-sizing: border-box;
+}
+.heading {
+  z-index: 5000;
+  width: 100%;
+  padding: 45px;
+  text-align: right;
+  color: $light;
+  background-color: $dark;
+}

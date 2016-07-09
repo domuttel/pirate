@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "heavitas";
+  src: url("fonts/heavitas.eot");
+  src: url("fonts/heavitas.eot?#iefix") format("embedded-opentype"), url("fonts/heavitas.woff") format("woff"), url("fonts/heavitas.woff2") format("woff2"), url("fonts/heavitas.ttf") format("truetype"), url("fonts/heavitas.svg#heavitas") format("svg"); }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "heavitas";
+    src: url("fonts/heavitas.svg#heavitas") format("svg"); } }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'heavitas';
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: .3rem; }
+
+a {
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  transition: letter-spacing 1s; }
+  a:hover {
+    letter-spacing: .05rem;
+    color: red; }
+
+header {
+  z-index: 5000;
+  padding: 10px 25px 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: right;
+  background-color: black;
+  color: white; }
+
+.background {
+  position: fixed;
+  width: 100%;
+  text-align: right;
+  top: 30vh;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 25px 0 0;
+  z-index: -5000; }
