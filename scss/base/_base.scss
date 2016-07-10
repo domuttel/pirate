@@ -14,16 +14,30 @@ h1 {
   font-size: 2rem;
   letter-spacing: .3rem;
 }
-
+@media screen and (min-width:768px) {
+  h1 {
+    font-size: 4rem;
+    letter-spacing: .3rem;
+  }
+}
 a {
+  display: inline-block;
   margin-left: 1rem;
   font-size: 1rem;
   color: white;
   text-decoration: none;
   padding: 12px;
-  transition: letter-spacing 1s;
-  &:hover{
-    letter-spacing: .05rem;
-    color: red;
-  }
+  transition: letter-spacing 1s, font-size 1s;
+  // &:hover, &:active{
+  //   font-size: 1.2rem;
+  //   letter-spacing: .05rem;
+  //   // color: red;
+  // }
+  &:hover,
+   &:focus,
+   &:active {
+     font-size: 1.2rem;
+     letter-spacing: .05rem;
+     color: red;
+   }
 }
