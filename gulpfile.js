@@ -2,14 +2,25 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var connect = require('gulp-connect');
 var sass = require('gulp-sass');
+var sass = require('gulp-sass');
+// var compass = require('gulp-compass');
+var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
 
+// gulp.task('default', function () {
+// 	return gulp.src('css/application.css')
+// 		.pipe(autoprefixer({
+// 			browsers: ['last 2 versions'],
+// 			cascade: false
+// 		}))
+// 		.pipe(gulp.dest('dist'));
+// });
 
 // gulp test
-gulp.task('hello', function(){
-  console.log('yo d');
-})
+// gulp.task('hello', function(){
+//   console.log('yo d');
+// })
 
 // configure connect task
 gulp.task('connect', function() {
@@ -48,12 +59,23 @@ gulp.task('jshint', function() {
 gulp.task('sass', function(){
   return gulp.src('scss/**/*.scss')
     .pipe(sass()) // Using gulp-sass
+    .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('css'))
     // browserSync
     .pipe(browserSync.reload({
       stream: true
     }))
 });
+// configure compass
+// gulp.task('styles', function() {
+//   return gulp.src('scss/**/*.scss')
+//     .pipe(compass({
+//       css: 'css',
+//       sass: 'scss',
+//       image: 'images'
+//     }))
+//     .pipe(gulp.dest('html/css'))
+// })
 
 // configure browserSync
 gulp.task('browserSync', function() {

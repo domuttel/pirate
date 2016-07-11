@@ -164,8 +164,11 @@ header {
   text-align: right;
   top: 30vh;
   height: 70vh;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 0 25px 0 0;
   z-index: -5000; }
