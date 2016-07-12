@@ -1,3 +1,60 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'heavitas';
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: .3rem; }
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+    letter-spacing: .3rem; } }
+
+a {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: #FFF;
+  text-decoration: none;
+  padding: 12px;
+  transition: letter-spacing 1s, font-size 1s; }
+  a:hover, a:focus, a:active {
+    font-size: 1.2rem;
+    letter-spacing: .05rem;
+    color: #DDD; }
+
+header {
+  z-index: 5000;
+  padding: 8px 25px 0 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: right;
+  background-color: green;
+  color: #FFF; }
+
+.background {
+  color: green;
+  position: fixed;
+  width: 100%;
+  text-align: right;
+  top: 30vh;
+  height: 70vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 25px 0 0;
+  z-index: -5000; }
+
 @font-face {
   font-family: "heavitas";
   src: url("fonts/heavitas.eot");
@@ -8,34 +65,26 @@
     font-family: "heavitas";
     src: url("fonts/heavitas.svg#heavitas") format("svg"); } }
 
-.desktop-nav {
-  width: 100%;
-  margin-top: -40px; }
-
-@media screen and (max-width: 768px) {
-  .desktop-nav {
-    display: none; } }
-
 .button_container {
   position: fixed;
   top: 27px;
   left: 25px;
-  height: 27px;
+  height: 45px;
   width: 35px;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 7500;
   transition: opacity .25s ease; }
   .button_container:hover {
     opacity: .7; }
   .button_container.active .top {
     transform: translateY(11px) translateX(0) rotate(45deg);
-    background: black; }
+    background: green; }
   .button_container.active .middle {
     opacity: 0;
-    background: black; }
+    background: green; }
   .button_container.active .bottom {
     transform: translateY(-11px) translateX(0) rotate(-45deg);
-    background: black; }
+    background: green; }
   .button_container span {
     background: #FFF;
     border: none;
@@ -98,17 +147,17 @@
       position: relative;
       opacity: 0; }
       .overlay ul li a {
-        color: black; }
+        color: green; }
         .overlay ul li a:hover, .overlay ul li a:focus, .overlay ul li a:active {
           color: red; }
 
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    left: 20%; }
+    right: 40%; }
   100% {
     opacity: 1;
-    left: 0; } }
+    right: 0; } }
 
 @media screen and (min-width: 768px) {
   .button_container {
@@ -116,59 +165,10 @@
   .overlay {
     display: none; } }
 
-* {
-  box-sizing: border-box; }
-
-body {
-  font-family: 'heavitas';
+.desktop-nav {
   width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0; }
+  margin-top: -40px; }
 
-h1 {
-  font-size: 2rem;
-  letter-spacing: .3rem; }
-
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 4rem;
-    letter-spacing: .3rem; } }
-
-a {
-  display: inline-block;
-  margin-left: 1rem;
-  font-size: 1rem;
-  color: white;
-  text-decoration: none;
-  padding: 12px;
-  transition: letter-spacing 1s, font-size 1s; }
-  a:hover, a:focus, a:active {
-    font-size: 1.2rem;
-    letter-spacing: .05rem;
-    color: red; }
-
-header {
-  z-index: 5000;
-  padding: 8px 25px 0 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  text-align: right;
-  background-color: black;
-  color: white; }
-
-.background {
-  position: fixed;
-  width: 100%;
-  text-align: right;
-  top: 30vh;
-  height: 70vh;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 0 25px 0 0;
-  z-index: -5000; }
+@media screen and (max-width: 768px) {
+  .desktop-nav {
+    display: none; } }

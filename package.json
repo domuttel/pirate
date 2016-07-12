@@ -1,18 +1,22 @@
 {
   "name": "update-me",
   "version": "0.0.0",
-  "description": "",
+  "description": "Pirate: Contemporary Art Website",
   "main": "gulpfile.js",
-  "author": "",
+  "author": "Dominic Muttel",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/domuttel/pirate"
+  },
   "devDependencies": {
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-compass": "^2.1.0",
-    "gulp-connect": "^2.2.0",
-    "gulp-jshint": "^1.11.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
-    "jshint-stylish": "^2.0.1"
+    "gulp-uglify": "^1.5.4"
   }
 }
