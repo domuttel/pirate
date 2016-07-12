@@ -2,59 +2,107 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Untitled</title>
+    <title>PIRATE</title>
 
     <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 
     <link rel="stylesheet" type="text/css" href="css/application.css">
   </head>
   <body>
-    <div class="container">
+
+
       <header>
 
         <div class="button_container" id="toggle">
-          <span class="top"></span>
-          <span class="middle"></span>
-          <span class="bottom"></span>
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
         </div>
 
         <div class="overlay" id="overlay">
           <nav class="overlay-menu">
             <ul>
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">CALENDAR</a></li>
-              <li><a href="#">PIRATES</a></li>
-              <li><a href="#">MAP/HOURS</a></li>
-              <li><a href="#">RENT PIRATE</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#calendar">CALENDAR</a></li>
+                <li><a href="#">MAP</a></li>
+                <li><a href="#">HOURS</a></li>
+                <li><a href="#">ARTISTS</a></li>
+                <li><a href="#">RENT PIRATE</a></li>
+                <li><a href="#">CONTACT</a></li>
             </ul>
           </nav>
         </div>
 
-        <h1>PIRATE</h1>
-        <div style="" class="desktop-nav">
-          <span><a href="#">ABOUT</a><span>
-          <span><a href="#">CALENDAR</a><span>
-          <span><a href="#">PIRATES</a><span>
-          <span><a href="#">MAP/HOURS</a><span>
-          <span><a href="#">RENT PIRATE</a><span>
+        <h1>
+            <a href="#home">PIRATE</a>
+        </h1>
+
+        <div class="desktop-nav">
+            <span><a href="#about-cal">ABOUT / CALENDAR</a><span>
+            <span><a href="#map-hours">MAP / HOURS</a><span>
+            <span><a href="#pirates">ARTISTS</a><span>
+            <span><a href="#rent">RENT PIRATE / CONTACT</a><span>
         </div>
+
       </header>
       <div class="background">
         <h1>CONTEMPORARY</h1>
         <h1>ART</h1>
       </div>
-      <div style="display:none;" class="main-wrapper">
-        <div style="height: 100%;"></div>
-        <div style="height: 100%;" id="about">
-          <p>Over 30 years ago, Pirate: Contemporary Art opened in Denver, Colorado as an audacious and eclectic alternative, artist-run cooperative gallery. <br>Today, little has changed - although our space has gotten slightly smaller and our front door relocated about 50 feet south of the corner. Many member artists have come and gone, but Pirate persists. It's an institution that remains flexible and edgy.</p>
-          <p>Pirate is open Friday evenings from 6 - 10 PM, Saturday/Sunday Noon to 5PM.<br>If you need to visit us at a time we are not open we suggest you contact the showing artist at that time (listed on our calendar page) to arrange for a private viewing.</p>
+
+
+      <div style="color:red;" class="body-wrap">
+            <div style="height: 100vh; background-color: rgba(0,0,0, 0.3);" id="home" class="row"></div>
+            <div id="about-cal" class="row">
+                <div style="padding-top: 20%; height: 100vh;  background-color: rgba(0,0,0, 0.3)"  id="about" class="columns six">
+                    <h2>ABOUT</h2>
+                    <img src="">
+                    <p style=" letter-spacing: .25rem; line-height; 2em;">Over 30 years ago, Pirate: Contemporary Art opened in Denver, Colorado as an audacious and eclectic alternative, artist-run cooperative gallery. <br>Today, little has changed - although our space has gotten slightly smaller and our front door relocated about 50 feet south of the corner. Many member artists have come and gone, but Pirate persists. It's an institution that remains flexible and edgy.</p>
+                    <p style="letter-spacing:.25rem;">Pirate is open Friday evenings from 6 - 10 PM, Saturday/Sunday Noon to 5PM.<br>If you need to visit us at a time we are not open we suggest you contact the showing artist at that time (listed on our calendar page) to arrange for a private viewing.</p>
+                </div>
+                <div style=" padding-top: 20%; overflow: scroll; height: 100vh;  overflow:hidden; background-color: rgba(0,0,0, 0.3);" id="calendar" class="columns six">
+                    <div style="height:40%; overflow:auto;">
+                        <h3>2016: CALENDAR</h3>
+                        <p>January 1 - 10 - 36th Anniversary Show</p>
+                        <p>January 15 - 31 - Shannon Kelly</p>
+                        <p>February 5- 21- Nicole Banowetz / Lucas McMahon</p>
+                        <p>February 26 – March 13 - Craig Robb / Heather Kegel</p>
+                        <p>March 18 - April 3 - Phil Bender / William Manke</p>
+                        <p>April 8 - 24 – Bug / Maeve Leslie</p>
+                        <p>April 29 -May 15 – Rebecca Cumming / Eric Anderson</p>
+                        <p>May 20 - June 5 - Laura Phelps Rogers / Brian Cavanaugh</p>
+                        <p>June 10 - 26 - Charles Livingston / Lisa Kerns</p>
+                        <p>July 1 - 17 - Debra Sanders and Korri Marshall / Dominic Muttel</p>
+                        <p>July 22 - August 7 - Tsogo Mijid / Chip Lynch</p>
+                        <p>August 12 - 28 - Michael Brohman / Walter Barton</p>
+                        <p>September 2 - 18 - Robert Green / Chrissy Espinoza</p>
+                        <p>September 23 - October 9 - Louis Recchia / Kat Nechleba</p>
+                        <p>October 14 - 30 - Juried Show/ Alicia Ordal</p>
+                        <p>November 4 - 6 - Day of the Dead</p>
+                        <p>November 11 - 27 – UCD Sculpture Club / Judith Grey</p>
+                        <p>December 2 - 18 - Justin Beard / Noah Sodano</p>
+                        <p>December 31 – January 1 - 37th Anniversary Show</p>
+                    </div>
+                </div>
+            </div>
+        <div class="row" id="map-hours">
+            <div style="padding-top: 100px; height: 100vh;  background-color: rgba(0,0,0, 0.3)" id="map" class="columns six">
+                <p>
+                    MAP
+                </p>
+            </div>
+            <div style="padding-top: 100px; height: 100vh;  background-color: rgba(0,0,0, 0.3)" id="hours" class="columns six">
+                <p>
+                    HOURS
+                </p>
+            </div>
         </div>
       </div>
 
         <footer>
 
         </footer>
-      </div>
+
 
 
 

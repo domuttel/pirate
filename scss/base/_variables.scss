@@ -5,22 +5,20 @@
 $z-mobile: 7500;
 $z-top: 5000;
 $z-middle: 0;
-$z-bottome: -5000;
+$z-bottom: -5000;
 
 //==========================
 // color varibales
 //==========================
 
-$color-dark: green;
+$color-dark: #000;
 $color-light: #FFF;
-$color-active: #DDD;
+$color-active: grey;
 
 //==========================
 // mobile nav hamburger button varibales
 //==========================
-
-$button-height: 45px;
-$button-width: 35px;
+$button-width: 25px;
 
 $mobile-styles:768px;
 
@@ -30,6 +28,14 @@ $dont-show: none;
 // Breakpoints
 $bp-larger-than-mobile    : "min-width: 400px" !default;
 $bp-larger-than-phablet   : "min-width: 550px" !default;
-$bp-larger-than-tablet    : "min-width: 750px" !default;
+$bp-larger-than-tablet    : "min-width: 768px" !default;
 $bp-larger-than-desktop   : "min-width: 1000px" !default;
 $bp-larger-than-desktophd : "min-width: 1200px" !default;
+
+//Grid Variables
+$container-width: 1960px !default;
+$container-width-larger-than-mobile: 85% !default;
+$container-width-larger-than-phablet: 80% !default;
+$total-columns: 12 !default;
+$column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
+$column-margin: 4% !default; // space between columns

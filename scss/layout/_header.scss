@@ -1,10 +1,25 @@
 header{
-  z-index: 5000;
-  padding: 8px 25px 0 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  text-align: right;
-  background-color: $color-dark;
-  color: $color-light;
-}
+    z-index: 5000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: right;
+    h1{
+        margin-top: 0px;
+        padding: 27px 2px 25px 0;
+        width: 100%;
+        background-color: $color-dark;
+        color: $color-light;
+        a{
+            letter-spacing: 1rem;
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: inherit;
+                    letter-spacing: .95rem;;
+                    color: $color-light;
+                    cursor: pointer;
+                }
+            }
+        }
+    }

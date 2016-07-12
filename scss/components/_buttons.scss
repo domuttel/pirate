@@ -3,9 +3,9 @@
 //===========================
 .button_container {
   position: fixed;
-  top: 27px;
+  top: 25px;
   left: 25px;
-  height: $button-height;
+  height: 0;
   width: $button-width;
   cursor: pointer;
   z-index: $z-mobile;
@@ -34,7 +34,7 @@
   span {
   background: $color-light;
   border: none;
-  height: 5px;
+  height: 9px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -109,11 +109,14 @@
       min-height: 50px;
       position: relative;
       opacity: 0;
+      background-color: $color-light;
+
 
       a {
-        color: $color-dark;
+        background-color: $color-dark;
         &:hover, &:focus, &:active {
-           color: red;
+           color: $color-active;
+
         }
       }
     }
@@ -147,13 +150,24 @@
 //===========================
 // desktop navigation nav
 //===========================
+
 .desktop-nav{
+text-align: right;
   width: 100%;
-  margin-top: -40px;
+  padding: -10px 10px 10px 10px;
+  margin: -69px  0  0 -25px;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .desktop-nav{
-    display: none;
+  display: none;
+
   }
 }
+// @media screen and (min-width:768px) {
+//   .desktop-nav{
+//
+//   opacity: 1;
+//   transition-delay: 0;
+//   }
+// }

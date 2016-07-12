@@ -1,5 +1,6 @@
 .background{
     color: $color-dark;
+    opacity: 1;
     position: fixed;
     width: 100%;
     text-align: right;
@@ -9,5 +10,5 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 0 25px 0 0;
-    z-index: -5000;
+    z-index: $z-bottom;
 }
