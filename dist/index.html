@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>PIRATE</title>
+
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/application.css">
+  </head>
+  <body>
+
+
+      <header>
+
+        <div class="button_container" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </div>
+
+        <div class="overlay" id="overlay">
+          <nav class="overlay-menu">
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#calendar">CALENDAR</a></li>
+                <li><a href="#">MAP</a></li>
+                <li><a href="#">HOURS</a></li>
+                <li><a href="#">ARTISTS</a></li>
+                <li><a href="#">RENT PIRATE</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <h1>
+            <a href="#home">PIRATE</a>
+        </h1>
+
+        <div class="desktop-nav">
+            <span><a href="#about-cal">ABOUT / CALENDAR</a><span>
+            <span><a href="#map-hours">MAP / HOURS</a><span>
+            <span><a href="#pirates">ARTISTS</a><span>
+            <span><a href="#rent">RENT PIRATE / CONTACT</a><span>
+        </div>
+
+      </header>
+      <div class="background">
+        <h1>CONTEMPORARY</h1>
+        <h1>ART</h1>
+      </div>
+
+
+      <div class="body-wrap">
+            <div id="home" class="row view-blocks">
+
+            </div>
+            <div id="about-cal" class="row">
+                <div  id="about" class="columns six view-blocks">
+                    <h2>ABOUT</h2>
+                    <img src="">
+                    <p>Over 30 years ago, Pirate: Contemporary Art opened in Denver, Colorado as an audacious and eclectic alternative, artist-run cooperative gallery. <br>Today, little has changed - although our space has gotten slightly smaller and our front door relocated about 50 feet south of the corner. Many member artists have come and gone, but Pirate persists. It's an institution that remains flexible and edgy.</p>
+                    <p>Pirate is open Friday evenings from 6 - 10 PM, Saturday/Sunday Noon to 5PM.<br>If you need to visit us at a time we are not open we suggest you contact the showing artist at that time (listed on our calendar page) to arrange for a private viewing.</p>
+                </div>
+                <div id="calendar" class="columns six view-blocks">
+                    <div>
+                        <h2>2016: CALENDAR</h2>
+                        <ul>
+                            <li>January 1 - 10 - 36th Anniversary Show</li>
+                            <li>January 15 - 31 - Shannon Kelly</li>
+                            <li>February 5- 21- Nicole Banowetz / Lucas McMahon</li>
+                            <li>February 26 – March 13 - Craig Robb / Heather Kegel</li>
+                            <li>March 18 - Aliril 3 - Phil Bender / William Manke</li>
+                            <li>Aliril 8 - 24 – Bug / Maeve Leslie</li>
+                            <li>Aliril 29 -May 15 – Rebecca Cumming / Eric Anderson</li>
+                            <li>May 20 - June 5 - Laura Phellis Rogers / Brian Cavanaugh</li>
+                            <li>June 10 - 26 - Charles Livingston / Lisa Kerns</li>
+                            <li>July 1 - 17 - Debra Sanders and Korri Marshall / Dominic Muttel</li>
+                            <li>July 22 - August 7 - Tsogo Mijid / Chili Lynch</li>
+                            <li>August 12 - 28 - Michael Brohman / Walter Barton</li>
+                            <li>Selitember 2 - 18 - Robert Green / Chrissy Esliinoza</li>
+                            <li>Selitember 23 - October 9 - Louis Recchia / Kat Nechleba</li>
+                            <li>October 14 - 30 - Juried Show/ Alicia Ordal</li>
+                            <li>November 4 - 6 - Day of the Dead</li>
+                            <li>November 11 - 27 – UCD Sculliture Club / Judith Grey</li>
+                            <li>December 2 - 18 - Justin Beard / Noah Sodano</li>
+                            <li>December 31 – January 1 - 37th Anniversary Show</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        <div class="row" id="map-hours">
+            <div id="hours" class="columns four view-blocks">
+                <p>
+                    HOURS
+                </p>
+            </div>
+            <div id="map-scroll" class="columns eight view-blocks">
+
+                <p>
+                    MAP
+                </p>
+                <div id="map"></div>
+            </div>
+        </div>
+      </div>
+
+        <footer>
+
+        </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <script type="text/javascript" src="production/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN12OVfRA04ok2BrwTmt6Q-P8cR2N-6AA&callback=initMap"async defer></script>
+
+  </body>
+</html>

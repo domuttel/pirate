@@ -22,12 +22,38 @@ h1 {
   }
 }
 
-a {
+h2{
+    font-family: $font-p;
+    font-size: 1.6em;
+    font-weight: 500;
+    // margin-bottom: -50px;
+    // line-height: 1.2rem;
+    // letter-spacing: .1rem;
+}
 
+p{
+    font-family: $font-p;
+    font-size: 1.25em;
+    font-weight: 200;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    font-family: $font-p;
+    font-size: 1em;
+    font-weight: 200;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+    list-style-type: none;
+}
+
+a {
   color: $color-light;
   text-decoration: none;
   padding: 10px;
-  transition: letter-spacing 1s, font-size 1s;
+  transition: letter-spacing 1s;
     &:hover,
     &:focus,
     &:active {

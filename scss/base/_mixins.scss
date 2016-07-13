@@ -1,3 +1,56 @@
+// @import "compass/css3";
+
+
 @mixin heavyFont {
   font-family: 'heavitas';
 }
+
+@mixin gwf($fonts...) {
+  $url: "http://fonts.googleapis.com/css?family=";
+  $nb: 0;
+
+  @each $font-name in $fonts {
+    $nb: $nb + 1;
+    $nb-word: 0;
+
+    @each $word in $font-name {
+      $nb-word: $nb-word + 1;
+      $url: $url + $word;
+
+      @if $nb-word < length($font-name) {
+        $url: $url + "+";
+      }
+    }
+
+    @if $nb < length($fonts) {
+       $url: $url + "|";
+    }
+  }
+
+  @import url(#{$url});
+}
+
+$font-p: Athiti;
+
+/* Or directly:
+$fonts: Kavoon, Wendy One, Bonbon;
+*/
+
+// @include gwf($font-p, $font-s, $font-t);
+//
+// .example {
+//   font-size: 3em;
+// }
+//
+// .first {
+//   font-family: Kavoon;
+// }
+//
+// .second {
+//   font-family: Wendy One;
+// }
+//
+// .third {
+//   font-family: Bonbon;
+// }
+// @import url(https://fonts.googleapis.com/css?family=Athiti:400,600);

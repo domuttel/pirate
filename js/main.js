@@ -4,7 +4,6 @@ $(document).on('ready', function() {
 // mobile nav logic
 //---------------------------------------------------
     $('#toggle').click(function() {
-
             $(this).toggleClass('active');
             $('#overlay').toggleClass('open');
 
@@ -36,5 +35,6 @@ $(document).on('ready', function() {
 			$('.background').css({opacity: ".05"});
 		};
 	});
+    
 
 });

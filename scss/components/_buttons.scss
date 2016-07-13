@@ -3,19 +3,21 @@
 //===========================
 .button_container {
   position: fixed;
-  top: 25px;
+  top: 18px;
   left: 25px;
   height: 0;
   width: $button-width;
   cursor: pointer;
   z-index: $z-mobile;
   transition: opacity .25s ease;
+  animation-name: ham-menu-visual;
+  animation-duration: 1s;
 
   &:hover {
     opacity: .7;
   }
-
   &.active {
+
     .top {
       transform: translateY(11px) translateX(0) rotate(45deg);
       background: $color-dark;
@@ -34,7 +36,7 @@
   span {
   background: $color-light;
   border: none;
-  height: 9px;
+  height: 2px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -68,6 +70,8 @@
     opacity: .95;
     visibility: visible;
     height: 100%;
+    top: 0;
+    right: 0;
 
     li {
       animation: fadeInRight .5s ease forwards;
@@ -90,11 +94,14 @@
   nav {
     position: relative;
     height: 70%;
-    top: 50%;
+    top: 50%;;
     transform: translateY(-50%);
     text-align: right;
   }
   ul {
+      font-family: $font-p;
+      font-size: 1em;
+      font-weight: 800;
     list-style: none;
     padding: 0;
     margin: 0 auto;
@@ -104,8 +111,8 @@
 
     li {
       display: block;
-      height: 25%;
-      height: calc(100% / 4);
+      height: 15%;
+    //   height: calc(100% / 4);
       min-height: 50px;
       position: relative;
       opacity: 0;
@@ -154,8 +161,26 @@
 .desktop-nav{
 text-align: right;
   width: 100%;
-  padding: -10px 10px 10px 10px;
-  margin: -69px  0  0 -25px;
+  // padding: -10px 10px 10px 10px;
+  margin: -70px  0  0 -23px;
+  font-family: $font-p;
+  font-size: 1em;
+  font-weight: 800;
+  a {
+    color: $color-light;
+    text-decoration: none;
+    padding: 0 7px 4px 7px;
+    transition: letter-spacing 1s;
+      &:hover,
+      &:focus,
+      &:active {
+          //  font-size: 1.2rem;
+           letter-spacing: .05rem;
+           color: $color-active;
+           background-color: $color-light;
+      }
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -171,3 +196,19 @@ text-align: right;
 //   transition-delay: 0;
 //   }
 // }
+/* Chrome, Safari, Opera */
+@-webkit-keyframes ham-menu-visual {
+    0%   {opacity: 1.0;}
+    25%  { opacity: 0.5;}
+    50%  { opacity: 0.7;}
+    75%  { opacity: 0.5;}
+    100% {opacity: 1.0;}
+}
+
+@keyframes ham-menu-visual {
+    0%   {opacity: 1.0;}
+    25%  { opacity: 0.5;}
+    50%  { opacity: 0.7;}
+    75%  { opacity: 0.5;}
+    100% {opacity: 1.0;}
+}

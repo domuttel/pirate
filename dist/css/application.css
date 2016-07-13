@@ -1,0 +1,384 @@
+/* Or directly:
+$fonts: Kavoon, Wendy One, Bonbon;
+*/
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'heavitas';
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto; }
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: .3rem; }
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+    letter-spacing: .3rem; } }
+
+h2 {
+  font-family: Athiti;
+  font-size: 1.6em;
+  font-weight: 500; }
+
+p {
+  font-family: Athiti;
+  font-size: 1.25em;
+  font-weight: 200;
+  line-height: 1.5rem;
+  letter-spacing: 0rem; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: Athiti;
+  font-size: 1em;
+  font-weight: 200;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  list-style-type: none; }
+
+a {
+  color: #FFF;
+  text-decoration: none;
+  padding: 10px;
+  transition: letter-spacing 1s; }
+  a:hover, a:focus, a:active {
+    letter-spacing: .05rem;
+    color: grey;
+    background-color: #FFF; }
+
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/9/2014
+* Sass Version by Seth Coelen https://github.com/whatsnewsaes
+*/
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/9/2014
+* Sass Version by Seth Coelen https://github.com/whatsnewsaes
+*/
+.body-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: auto; }
+
+.row {
+  width: 100%;
+  padding-right: 0; }
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  margin-top: 5rem; }
+
+@media (min-width: 400px) {
+  .body-wrap {
+    width: 85%;
+    padding: 0; } }
+
+@media (min-width: 768px) {
+  .body-wrap {
+    width: 80%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+  .one.column,
+  .one.columns {
+    width: 4.66667%; }
+  .two.columns {
+    width: 13.33333%; }
+  .three.columns {
+    width: 22%; }
+  .four.columns {
+    width: 30.66667%; }
+  .five.columns {
+    width: 39.33333%; }
+  .six.columns {
+    width: 48%; }
+  .seven.columns {
+    width: 56.66667%; }
+  .eight.columns {
+    width: 65.33333%; }
+  .nine.columns {
+    width: 74%; }
+  .ten.columns {
+    width: 82.66667%; }
+  .eleven.columns {
+    width: 91.33333%; }
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0; }
+  .one-third.column {
+    width: 30.66667%; }
+  .two-thirds.column {
+    width: 65.33333%; }
+  .one-half.column {
+    width: 48%; }
+  .offset-by-one.column,
+  .offset-by-one.columns {
+    margin-left: 8.66667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns {
+    margin-left: 17.33333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns {
+    margin-left: 26%; }
+  .offset-by-four.column,
+  .offset-by-four.columns {
+    margin-left: 34.66667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns {
+    margin-left: 43.33333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns {
+    margin-left: 52%; }
+  .offset-by-seven.column,
+  .offset-by-seven.columns {
+    margin-left: 60.66667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns {
+    margin-left: 69.33333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns {
+    margin-left: 78%; }
+  .offset-by-ten.column,
+  .offset-by-ten.columns {
+    margin-left: 86.66667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns {
+    margin-left: 95.33333%; }
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns {
+    margin-left: 34.66667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns {
+    margin-left: 69.33333%; }
+  .offset-by-one-half.column,
+  .offset-by-one-half.column {
+    margin-left: 52%; } }
+
+.body-wrap:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+header {
+  z-index: 5000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: right; }
+  header h1 {
+    margin-top: -10px;
+    padding: 27px 2px 15px 0;
+    width: 100%;
+    background-color: #000;
+    color: #FFF; }
+    header h1 a {
+      letter-spacing: 1rem; }
+      header h1 a:hover, header h1 a:focus, header h1 a:active {
+        background-color: inherit;
+        letter-spacing: .95rem;
+        color: #FFF;
+        cursor: pointer; }
+
+.view-blocks {
+  padding-top: 90px;
+  height: 100vh; }
+
+#map {
+  width: 100%;
+  height: 80%; }
+
+.background {
+  color: #DADADA;
+  opacity: 1;
+  position: fixed;
+  width: 100%;
+  text-align: right;
+  top: 30vh;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 25px 0 0;
+  z-index: -5000; }
+
+.button_container {
+  position: fixed;
+  top: 18px;
+  left: 25px;
+  height: 0;
+  width: 25px;
+  cursor: pointer;
+  z-index: 7500;
+  transition: opacity .25s ease;
+  animation-name: ham-menu-visual;
+  animation-duration: 1s; }
+  .button_container:hover {
+    opacity: .7; }
+  .button_container.active .top {
+    transform: translateY(11px) translateX(0) rotate(45deg);
+    background: #000; }
+  .button_container.active .middle {
+    opacity: 0;
+    background: #000; }
+  .button_container.active .bottom {
+    transform: translateY(-11px) translateX(0) rotate(-45deg);
+    background: #000; }
+  .button_container span {
+    background: #FFF;
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .35s ease;
+    cursor: pointer; }
+    .button_container span:nth-of-type(2) {
+      top: 11px; }
+    .button_container span:nth-of-type(3) {
+      top: 22px; }
+
+.overlay {
+  position: fixed;
+  background: #FFF;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden; }
+  .overlay.open {
+    opacity: .95;
+    visibility: visible;
+    height: 100%;
+    top: 0;
+    right: 0; }
+    .overlay.open li {
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: .35s; }
+      .overlay.open li:nth-of-type(2) {
+        animation-delay: .4s; }
+      .overlay.open li:nth-of-type(3) {
+        animation-delay: .45s; }
+      .overlay.open li:nth-of-type(4) {
+        animation-delay: .50s; }
+      .overlay.open li:nth-of-type(5) {
+        animation-delay: .55s; }
+  .overlay nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right; }
+  .overlay ul {
+    font-family: Athiti;
+    font-size: 1em;
+    font-weight: 800;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%; }
+    .overlay ul li {
+      display: block;
+      height: 15%;
+      min-height: 50px;
+      position: relative;
+      opacity: 0;
+      background-color: #FFF; }
+      .overlay ul li a {
+        background-color: #000; }
+        .overlay ul li a:hover, .overlay ul li a:focus, .overlay ul li a:active {
+          color: grey; }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    right: 40%; }
+  100% {
+    opacity: 1;
+    right: 0; } }
+
+@media screen and (min-width: 768px) {
+  .button_container {
+    display: none; }
+  .overlay {
+    display: none; } }
+
+.desktop-nav {
+  text-align: right;
+  width: 100%;
+  margin: -70px  0  0 -23px;
+  font-family: Athiti;
+  font-size: 1em;
+  font-weight: 800; }
+  .desktop-nav a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 0 7px 4px 7px;
+    transition: letter-spacing 1s; }
+    .desktop-nav a:hover, .desktop-nav a:focus, .desktop-nav a:active {
+      letter-spacing: .05rem;
+      color: grey;
+      background-color: #FFF; }
+
+@media screen and (max-width: 768px) {
+  .desktop-nav {
+    display: none; } }
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes ham-menu-visual {
+  0% {
+    opacity: 1.0; }
+  25% {
+    opacity: 0.5; }
+  50% {
+    opacity: 0.7; }
+  75% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1.0; } }
+
+@keyframes ham-menu-visual {
+  0% {
+    opacity: 1.0; }
+  25% {
+    opacity: 0.5; }
+  50% {
+    opacity: 0.7; }
+  75% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1.0; } }
+
+/*# sourceMappingURL=../maps/application.css.map */
