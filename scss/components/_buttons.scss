@@ -3,7 +3,7 @@
 //===========================
 .button_container {
   position: fixed;
-  top: 18px;
+  top: 21px;
   left: 25px;
   height: 0;
   width: $button-width;
@@ -36,7 +36,7 @@
   span {
   background: $color-light;
   border: none;
-  height: 2px;
+  height: 4px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -89,6 +89,15 @@
       &:nth-of-type(5) {
         animation-delay: .55s;
       }
+      &:nth-of-type(6) {
+        animation-delay: .60s;
+      }
+      &:nth-of-type(7) {
+        animation-delay: .65s;
+      }
+      &:nth-of-type(8) {
+        animation-delay: .70s;
+      }
     }
   }
   nav {
@@ -101,8 +110,7 @@
   ul {
       font-family: $font-p;
       font-size: 1em;
-      font-weight: 800;
-    list-style: none;
+font-weight: 200;    list-style: none;
     padding: 0;
     margin: 0 auto;
     display: inline-block;
@@ -162,10 +170,10 @@
 text-align: right;
   width: 100%;
   // padding: -10px 10px 10px 10px;
-  margin: -70px  0  0 -23px;
+  margin: -68px  0  0 -23px;
   font-family: $font-p;
-  font-size: 1em;
-  font-weight: 800;
+  font-size: .8em;
+  font-weight: 200;
   a {
     color: $color-light;
     text-decoration: none;

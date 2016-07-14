@@ -24,11 +24,12 @@
             <ul>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#calendar">CALENDAR</a></li>
-                <li><a href="#">MAP</a></li>
-                <li><a href="#">HOURS</a></li>
-                <li><a href="#">ARTISTS</a></li>
-                <li><a href="#">RENT PIRATE</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="#map">MAP</a></li>
+                <li><a href="#hours">HOURS</a></li>
+                <li><a href="#artists">ARTISTS</a></li>
+                <li><a href="#press">PRESS</a></li>
+                <li><a href="#rent">RENT PIRATE</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
           </nav>
         </div>
@@ -38,13 +39,15 @@
         </h1>
 
         <div class="desktop-nav">
-            <span><a href="#about-cal">ABOUT / CALENDAR</a><span>
+            <span><a href="#about">ABOUT</a><span>
             <span><a href="#map-hours">MAP / HOURS</a><span>
-            <span><a href="#pirates">ARTISTS</a><span>
-            <span><a href="#rent">RENT PIRATE / CONTACT</a><span>
+            <span><a href="#artists">ARTISTS</a><span>
+            <span><a href="#press">PRESS</a><span>
+            <span><a href="#rent-contact">RENT PIRATE / CONTACT</a><span>
         </div>
 
       </header>
+
       <div class="background">
         <h1>CONTEMPORARY</h1>
         <h1>ART</h1>
@@ -52,19 +55,43 @@
 
 
       <div class="body-wrap">
-            <div id="home" class="row view-blocks">
+            <div id="home" class="row">
+                <div class="columns twelve view-blocks">
+
+                </div>
+            </div>
+            <div class="row">
+                <div  id="about" class="columns seven view-blocks">
+                    <h2>About</h2>
+                    <p>Over 30 years ago, Pirate: Contemporary Art opened in Denver, Colorado as an audacious and eclectic alternative, artist-run cooperative gallery. <p/>Today, little has changed - although our space has gotten slightly smaller and our front door relocated about 50 feet south of the corner. Many member artists have come and gone, but Pirate persists. It's an institution that remains flexible and edgy.</p>
+                </div>
+            </div>
+            <div id="contact" class="row view-blocks">
+
+                <div>
+                    <img src="images/icons-02.png" alt="" />
+                </div>
+
+                <div>
+                    <ul>
+                        <li>LOGIN</li>
+                        <li>APPLY</li>
+                        <li>VOLUNTEER</li>
+                        <li>DONATE</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <img src="images/icons-01.png" alt="" />
+                </div>
 
             </div>
-            <div id="about-cal" class="row">
-                <div  id="about" class="columns six view-blocks">
-                    <h2>ABOUT</h2>
-                    <img src="">
-                    <p>Over 30 years ago, Pirate: Contemporary Art opened in Denver, Colorado as an audacious and eclectic alternative, artist-run cooperative gallery. <br>Today, little has changed - although our space has gotten slightly smaller and our front door relocated about 50 feet south of the corner. Many member artists have come and gone, but Pirate persists. It's an institution that remains flexible and edgy.</p>
-                    <p>Pirate is open Friday evenings from 6 - 10 PM, Saturday/Sunday Noon to 5PM.<br>If you need to visit us at a time we are not open we suggest you contact the showing artist at that time (listed on our calendar page) to arrange for a private viewing.</p>
-                </div>
-                <div id="calendar" class="columns six view-blocks">
-                    <div>
-                        <h2>2016: CALENDAR</h2>
+            <div id="artists" class="row view-blocks">
+
+            </div>
+            <div class="row">
+                <div id="calendar" class="columns five view-blocks">
+                        <h2>2016: SCHED</h2>
                         <ul>
                             <li>January 1 - 10 - 36th Anniversary Show</li>
                             <li>January 15 - 31 - Shannon Kelly</li>
@@ -86,35 +113,49 @@
                             <li>December 2 - 18 - Justin Beard / Noah Sodano</li>
                             <li>December 31 – January 1 - 37th Anniversary Show</li>
                     </ul>
-                    </div>
                 </div>
             </div>
-        <div class="row" id="map-hours">
-            <div id="hours" class="columns four view-blocks">
-                <p>
-                    HOURS
-                </p>
+            <div class="row view-blocks">
+                <h2>PRESS</h2>
             </div>
-            <div id="map-scroll" class="columns eight view-blocks">
+            <div class="row" id="map-hours">
 
-                <p>
-                    MAP
-                </p>
-                <div id="map"></div>
+                <div id="hours" class="columns two view-blocks">
+                    <h2>HOURS</h2>
+                    <ul >
+                        <li><b>Thursday</b></li>
+                        <li>6 - 9 pm</li>
+                        <li><b>Friday</b></li>
+                        <li>6 - 10 pm</li>
+                        <li><b>Saturday</b></li>
+                        <li>12 - 6 pm</li>
+                        <li><b>Sunday</b></li>
+                        <li>12 - 5 pm</li>
+                        <li>* <b>By Appointment</b></li>
+
+                    </ul>
+                </div>
+                <div class="columns four offset-by-four view-blocks">
+                    <h2>MAP</h2>
+                    <div id="map"></div>
+                    <h2>3655 Navajo St. Denver CO, 80211</h2>
+                </div>
             </div>
-        </div>
+
       </div>
+      <div class="footer columns twelve ">
 
-        <footer>
 
-        </footer>
-
+      </div>
+<!-- <div class="body-wrap"> -->
+<!-- </div> -->
 
 
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-    <script type="text/javascript" src="production/app.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN12OVfRA04ok2BrwTmt6Q-P8cR2N-6AA&callback=initMap"async defer></script>
 
   </body>

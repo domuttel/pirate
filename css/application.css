@@ -13,7 +13,7 @@ body {
 
 h1 {
   font-size: 2rem;
-  letter-spacing: .3rem; }
+  letter-spacing: .2rem; }
 
 @media screen and (min-width: 768px) {
   h1 {
@@ -21,16 +21,21 @@ h1 {
     letter-spacing: .3rem; } }
 
 h2 {
+  font-family: 'heavitas';
+  font-size: 2rem;
+  letter-spacing: .3rem; }
+
+h3 {
   font-family: Athiti;
-  font-size: 1.6em;
-  font-weight: 500; }
+  font-size: 2em;
+  font-weight: 200; }
 
 p {
   font-family: Athiti;
-  font-size: 1.25em;
-  font-weight: 200;
-  line-height: 1.5rem;
-  letter-spacing: 0rem; }
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 1.75rem;
+  letter-spacing: .25rem; }
 
 ul {
   margin: 0;
@@ -77,11 +82,10 @@ a {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
-  overflow: auto; }
+  overflow: visible; }
 
 .row {
-  width: 100%;
-  padding-right: 0; }
+  width: 100%; }
 
 .column,
 .columns {
@@ -193,7 +197,7 @@ header {
   width: 100%;
   text-align: right; }
   header h1 {
-    margin-top: -10px;
+    margin-top: -5px;
     padding: 27px 2px 15px 0;
     width: 100%;
     background-color: #000;
@@ -207,12 +211,71 @@ header {
         cursor: pointer; }
 
 .view-blocks {
-  padding-top: 90px;
-  height: 100vh; }
+  padding-top: 90px; }
+
+.hours {
+  text-align: center; }
 
 #map {
   width: 100%;
-  height: 80%; }
+  height: 200px; }
+
+#home {
+  top: 30vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.main-line-one {
+  height: 3px;
+  background-color: #000; }
+
+.main-line-two {
+  height: 3px;
+  margin-top: 50px;
+  background-color: #000; }
+
+#contact {
+  margin-left: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+  #contact img {
+    width: 60%;
+    max-width: 175px; }
+  #contact ul {
+    margin-left: -30%;
+    margin-top: -10px;
+    width: 80px;
+    text-align: center; }
+    #contact ul li {
+      color: #000; }
+      #contact ul li:hover, #contact ul li:focus, #contact ul li:active {
+        color: #FFF; }
+
+.artist-profiles .hidden-profile a:hover, .artist-profiles .hidden-profile a:focus, .artist-profiles .hidden-profile a:active {
+  background-color: white;
+  border-radius: 1000px; }
+
+.artist-profiles .hidden-profile a img {
+  width: 20%; }
+
+.profile-images {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 60px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 60px;
+  -moz-background-clip: padding;
+  border-radius: 100px;
+  background-clip: padding-box;
+  margin: -50px 0 0 5px;
+  float: left;
+  background-size: cover;
+  background-position: center center; }
 
 .background {
   color: #DADADA;
@@ -228,14 +291,14 @@ header {
   padding: 0 25px 0 0;
   z-index: -5000; }
 
-footer {
+.footer {
   background-color: #000;
   height: 30px;
   width: 100%; }
 
 .button_container {
   position: fixed;
-  top: 18px;
+  top: 21px;
   left: 25px;
   height: 0;
   width: 25px;
@@ -258,7 +321,7 @@ footer {
   .button_container span {
     background: #FFF;
     border: none;
-    height: 2px;
+    height: 4px;
     width: 100%;
     position: absolute;
     top: 0;
@@ -298,6 +361,12 @@ footer {
         animation-delay: .50s; }
       .overlay.open li:nth-of-type(5) {
         animation-delay: .55s; }
+      .overlay.open li:nth-of-type(6) {
+        animation-delay: .60s; }
+      .overlay.open li:nth-of-type(7) {
+        animation-delay: .65s; }
+      .overlay.open li:nth-of-type(8) {
+        animation-delay: .70s; }
   .overlay nav {
     position: relative;
     height: 70%;
@@ -307,7 +376,7 @@ footer {
   .overlay ul {
     font-family: Athiti;
     font-size: 1em;
-    font-weight: 800;
+    font-weight: 200;
     list-style: none;
     padding: 0;
     margin: 0 auto;
@@ -343,10 +412,10 @@ footer {
 .desktop-nav {
   text-align: right;
   width: 100%;
-  margin: -70px  0  0 -23px;
+  margin: -68px  0  0 -23px;
   font-family: Athiti;
-  font-size: 1em;
-  font-weight: 800; }
+  font-size: .8em;
+  font-weight: 200; }
   .desktop-nav a {
     color: #FFF;
     text-decoration: none;

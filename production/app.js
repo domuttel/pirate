@@ -3,10 +3,13 @@ $(document).on('ready', function() {
 //---------------------------------------------------
 // mobile nav logic
 //---------------------------------------------------
-    $('#toggle').click(function() {
-            $(this).toggleClass('active');
+    $(document).on('click', '#toggle', function() {
+            $('#toggle').toggleClass('active');
             $('#overlay').toggleClass('open');
-
+    });
+    $('.overlay-menu').on('click', 'li', function() {
+            $('#toggle').toggleClass('active');
+            $('#overlay').toggleClass('open');
     });
     //*** Close mobile nav
     // $("li").on('click', function(){
@@ -35,7 +38,33 @@ $(document).on('ready', function() {
 			$('.background').css({opacity: ".05"});
 		};
 	});
-    
+//---------------------------------------------------
+// AJX for artist dat
+//---------------------------------------------------
+// var
+
+    var url = "../data/artists.json";
+    $.getJSON(url, function (response) {
+        var statusHTML = '<h2>artists</h2> <div class="artist-profiles colums seven">';
+        $.each(response, function (index, artist) {
+            var hiddenInfo = '<div class="hidden-profile">';
+            var hiddenInfoClose = '</div>';
+            var social = '<a href="' + artist.facebook + '"><img src="images/icons-02.png" alt=""></a>';
+            var profilePic = '<div class="profile-images" style="background-image: url(' + artist.bioImage + ')"></div>';
+            statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>'
+                        + hiddenInfo +
+                        profilePic + social +
+                        '<div> Memeber Type: ' + artist.memberType + '</div>' +
+
+                        '<p> Bio: ' + artist.bio + '</p>'
+                        + hiddenInfoClose;
+        });
+        statusHTML += '</div>';
+        $('#artists').html(statusHTML)
+    });
+
+
+
 
 });
 
@@ -68,7 +97,7 @@ function initMap() {
           "stylers": [
               { "hue": "#ff1a00" },
               { "visibility": "off" },
-              { "color": "#00000" }
+              { "color": "#060e0c" }
           ]
       },{
           "featureType": "landscape.man_made",
@@ -88,6 +117,7 @@ function initMap() {
           "featureType": "poi",
           "elementType": "labels",
           "stylers": [
+              { "visibility": "off" },
               { "lightness": -100 }
           ]
       },{
@@ -95,7 +125,9 @@ function initMap() {
           "featureType": "poi",
           "elementType": "geometry",
           "stylers": [
+            //   { "visibility": "off" },
               { "lightness": -100 }
+
           ]
       },{
           "featureType": "water",
@@ -117,11 +149,11 @@ var myLatLng = {lat:39.76787109999999, lng: -105.00435830000004};
   var image = 'images/red-skull.png';
   var marker = new google.maps.Marker({
          position: myLatLng,
+        //  label: "P",
          map: map,
          icon: image
        });
- //  var DenverArtMuseum = new google.maps.Marker({ position: {lat: 39.7371878, lng: -104.9893451}, map: map,
- // });
+
 }
 
 //# sourceMappingURL=../maps/app.js.map
