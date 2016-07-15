@@ -14,10 +14,14 @@
            "showDates": "",
 
            "website": "",
-           "twitter": "",
-           "facebook": "https://www.facebook.com/",
-           "instagram": "",
+
+           "twitter": "<a href='https://www.facebook.com/'><img src='images/social-05.png' alt=''></a>",
+           "facebook": "<a href='https://www.facebook.com/'><img src='images/social-02.png' alt=''></a>",
+           "instagram": "<a href='https://www.facebook.com/'><img src='images/social-03.png' alt=''></a>",
            "ello": "",
+           "youtube":"<a href='https://www.facebook.com/'><img src='images/social-01.png' alt=''></a>",
+           "linkedin":"<a href='https://www.facebook.com/'><img src='images/social-04.png' alt=''></a>",
+           "vimeo":"<a href='https://www.facebook.com/'><img src='images/social-06.png' alt=''></a>",
 
            "imgOne": "image one",
            "imgTwo": "how two",

@@ -64,20 +64,15 @@
 // styles for artist profiles
 //=================================================
 .artist-profiles{
-    h3{
-        //H3 styles here
-    }
     .hidden-profile {
-        img {
-
+        a{
+            padding: 0;
         }
-        a {
+        img{
+            width: 8%;
             &:hover, &:focus, &:active {
-                background-color: white;
-                border-radius: 1000px;
-            }
-            img{
-                width: 20%;
+                // margin-top: 45px;
+            background-color: pink;
             }
         }
         span {
@@ -87,6 +82,11 @@
 
         }
     }
+}
+#member{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
 }
 .hidden-profile{
     // display: nosne;

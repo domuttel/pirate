@@ -256,12 +256,18 @@ header {
       #contact ul li:hover, #contact ul li:focus, #contact ul li:active {
         color: #FFF; }
 
-.artist-profiles .hidden-profile a:hover, .artist-profiles .hidden-profile a:focus, .artist-profiles .hidden-profile a:active {
-  background-color: white;
-  border-radius: 1000px; }
+.artist-profiles .hidden-profile a {
+  padding: 0; }
 
-.artist-profiles .hidden-profile a img {
-  width: 20%; }
+.artist-profiles .hidden-profile img {
+  width: 8%; }
+  .artist-profiles .hidden-profile img:hover, .artist-profiles .hidden-profile img:focus, .artist-profiles .hidden-profile img:active {
+    background-color: pink; }
+
+#member {
+  display: flex;
+  flex-flow: row;
+  width: 100%; }
 
 .profile-images {
   width: 100px;
