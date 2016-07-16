@@ -47,16 +47,6 @@ ul {
   letter-spacing: 0rem;
   list-style-type: none; }
 
-a {
-  color: #FFF;
-  text-decoration: none;
-  padding: 10px;
-  transition: letter-spacing 1s; }
-  a:hover, a:focus, a:active {
-    letter-spacing: .05rem;
-    color: grey;
-    background-color: #FFF; }
-
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
@@ -190,117 +180,6 @@ a {
   display: table;
   clear: both; }
 
-header {
-  z-index: 5000;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  text-align: right; }
-  header h1 {
-    margin-top: -5px;
-    padding: 27px 2px 15px 0;
-    width: 100%;
-    background-color: #000;
-    color: #FFF; }
-    header h1 a {
-      letter-spacing: 1rem; }
-      header h1 a:hover, header h1 a:focus, header h1 a:active {
-        background-color: inherit;
-        letter-spacing: .95rem;
-        color: #FFF;
-        cursor: pointer; }
-
-.view-blocks {
-  padding-top: 90px; }
-
-.hours {
-  text-align: center; }
-
-#map {
-  width: 100%;
-  height: 200px; }
-
-#home {
-  top: 30vh;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-
-.main-line-one {
-  height: 3px;
-  background-color: #000; }
-
-.main-line-two {
-  height: 3px;
-  margin-top: 50px;
-  background-color: #000; }
-
-#contact {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around; }
-  #contact img {
-    width: 60%;
-    max-width: 175px; }
-  #contact ul {
-    margin-left: -30%;
-    margin-top: -10px;
-    width: 80px;
-    text-align: center; }
-    #contact ul li {
-      color: #000; }
-      #contact ul li:hover, #contact ul li:focus, #contact ul li:active {
-        color: red; }
-
-.artist-profiles .hidden-profile a {
-  padding: 0; }
-
-.artist-profiles .hidden-profile img {
-  width: 8%;
-  max-width: 35px; }
-  .artist-profiles .hidden-profile img:hover, .artist-profiles .hidden-profile img:focus, .artist-profiles .hidden-profile img:active {
-    background-color: pink; }
-
-#member {
-  display: flex;
-  flex-flow: row;
-  width: 100%; }
-
-.profile-images {
-  width: 100px;
-  height: 100px;
-  -webkit-border-radius: 60px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 60px;
-  -moz-background-clip: padding;
-  border-radius: 100px;
-  background-clip: padding-box;
-  margin: -50px 0 0 5px;
-  float: left;
-  background-size: cover;
-  background-position: center center; }
-
-.background {
-  color: #DADADA;
-  opacity: 1;
-  position: fixed;
-  width: 100%;
-  text-align: right;
-  top: 30vh;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 0 25px 0 0;
-  z-index: -5000; }
-
-.footer {
-  background-color: #000;
-  height: 30px;
-  width: 100%; }
-
 .button_container {
   position: fixed;
   top: 21px;
@@ -393,9 +272,11 @@ header {
       height: 15%;
       min-height: 50px;
       position: relative;
-      opacity: 0;
-      background-color: #FFF; }
+      opacity: 0; }
       .overlay ul li a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
         background-color: #000; }
         .overlay ul li a:hover, .overlay ul li a:focus, .overlay ul li a:active {
           color: grey; }
@@ -403,7 +284,7 @@ header {
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    right: 40%; }
+    right: 800px; }
   100% {
     opacity: 1;
     right: 0; } }
@@ -417,7 +298,7 @@ header {
 .desktop-nav {
   text-align: right;
   width: 100%;
-  margin: -68px  0  0 -23px;
+  margin: -68px  0  0 -14px;
   font-family: Athiti;
   font-size: .8em;
   font-weight: 200; }
@@ -459,5 +340,143 @@ header {
     opacity: 0.5; }
   100% {
     opacity: 1.0; } }
+
+header {
+  z-index: 5000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: right; }
+  header h1 {
+    margin-top: -5px;
+    padding: 27px 2px 15px 0;
+    width: 100%;
+    background-color: #000;
+    color: #FFF; }
+    header h1 a {
+      color: white;
+      text-decoration: none;
+      letter-spacing: 1rem;
+      transition: letter-spacing 1s; }
+      header h1 a:hover, header h1 a:focus, header h1 a:active {
+        background-color: inherit;
+        letter-spacing: .90rem;
+        color: #FFF;
+        cursor: pointer; }
+
+.view-blocks {
+  padding-top: 80px; }
+
+.hours {
+  text-align: center; }
+
+#map {
+  width: 100%;
+  height: 200px; }
+
+#home {
+  top: 30vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.pirate-email {
+  width: 100px;
+  height: 100px;
+  background-size: 100px;
+  background-image: url(../images/email_lg_b-01.png);
+  background-repeat: no-repeat;
+  border-radius: 1000px;
+  font-size: 16px;
+  background-size: 100%;
+  transition: all .25s; }
+  .pirate-email:hover {
+    background-image: url(../images/email_lg_w-01.png);
+    background-color: rgba(111, 111, 111, 0.2); }
+
+.pirate-facebook {
+  width: 100px;
+  height: 100px;
+  max-height: 120px;
+  background-image: url(../images/facebook_lg_b-02.png);
+  max-width: 120px;
+  background-repeat: no-repeat;
+  border-radius: 1000px;
+  font-size: 16px;
+  background-size: 100%;
+  transition: all .25s; }
+  .pirate-facebook:hover {
+    background-color: rgba(111, 111, 111, 0.2);
+    background-image: url(../images/facebook_lg_w-02.png); }
+
+#contact {
+  margin-top: -40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; }
+  #contact .main-buttons {
+    display: flex;
+    align-items: center; }
+    #contact .main-buttons ul {
+      width: 100px;
+      margin-top: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+      #contact .main-buttons ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: -35px 0 20px 0;
+        padding: 10px;
+        color: #000;
+        transition: all .25s; }
+        #contact .main-buttons ul li:hover, #contact .main-buttons ul li:focus, #contact .main-buttons ul li:active {
+          color: #FFF;
+          background-color: rgba(111, 111, 111, 0.2); }
+
+.artist-profiles .hidden-profile a {
+  padding: 0; }
+
+.artist-profiles .hidden-profile img {
+  width: 8%;
+  max-width: 35px; }
+
+#member {
+  display: flex;
+  flex-flow: row;
+  width: 100%; }
+
+.profile-images {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-clip: padding-box;
+  margin: -50px 0 0 5px;
+  float: left;
+  background-size: cover;
+  background-position: center; }
+
+.background {
+  color: #DADADA;
+  opacity: 1;
+  position: fixed;
+  width: 100%;
+  text-align: right;
+  top: 30vh;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 25px 0 0;
+  z-index: -5000; }
+
+.footer {
+  background-color: #000;
+  height: 30px;
+  width: 100%; }
 
 /*# sourceMappingURL=../maps/application.css.map */

@@ -2,164 +2,158 @@
 // mobile navigation nav
 //===========================
 .button_container {
-  position: fixed;
-  top: 21px;
-  left: 25px;
-  height: 0;
-  width: $button-width;
-  cursor: pointer;
-  z-index: $z-mobile;
-  transition: opacity .25s ease;
-  animation-name: ham-menu-visual;
-  animation-duration: 1s;
-
-  &:hover {
-    opacity: .7;
-  }
-  &.active {
-
-    .top {
-      transform: translateY(11px) translateX(0) rotate(45deg);
-      background: $color-dark;
+    position: fixed;
+    top: 21px;
+    left: 25px;
+    height: 0;
+    width: $button-width;
+    cursor: pointer;
+    z-index: $z-mobile;
+    transition: opacity .25s ease;
+    animation-name: ham-menu-visual;
+    animation-duration: 1s;
+    &:hover {
+        opacity: .7;
     }
-    .middle {
-      opacity: 0;
-      background: $color-dark;
-    }
-
-    .bottom {
-      transform: translateY(-11px) translateX(0) rotate(-45deg);
-      background: $color-dark;
-    }
-  }
-
-  span {
-  background: $color-light;
-  border: none;
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition:  all .35s ease;
-  cursor: pointer;
-
-    &:nth-of-type(2) {
-      top: 11px;
+    &.active {
+        .top {
+            transform: translateY(11px) translateX(0) rotate(45deg);
+            background: $color-dark;
+        }
+        .middle {
+            opacity: 0;
+            background: $color-dark;
+        }
+        .bottom {
+            transform: translateY(-11px) translateX(0) rotate(-45deg);
+            background: $color-dark;
+        }
     }
 
-    &:nth-of-type(3) {
-      top: 22px;
+    span {
+        background: $color-light;
+        border: none;
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition:  all .35s ease;
+        cursor: pointer;
+
+        &:nth-of-type(2) {
+            top: 11px;
+        }
+        &:nth-of-type(3) {
+            top: 22px;
+        }
     }
-  }
 }
 
 .overlay {
-  position: fixed;
-  background: $color-light;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .35s, visibility .35s, height .35s;
-  overflow: hidden;
-
-  &.open {
-    opacity: .95;
-    visibility: visible;
-    height: 100%;
+    position: fixed;
+    background: $color-light;
     top: 0;
-    right: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
 
-    li {
-      animation: fadeInRight .5s ease forwards;
-      animation-delay: .35s;
+    &.open {
+        opacity: .95;
+        visibility: visible;
+        height: 100%;
+        top: 0;
+        right: 0;
 
-      &:nth-of-type(2) {
-        animation-delay: .4s;
-      }
-      &:nth-of-type(3) {
-        animation-delay: .45s;
-      }
-      &:nth-of-type(4) {
-        animation-delay: .50s;
-      }
-      &:nth-of-type(5) {
-        animation-delay: .55s;
-      }
-      &:nth-of-type(6) {
-        animation-delay: .60s;
-      }
-      &:nth-of-type(7) {
-        animation-delay: .65s;
-      }
-      &:nth-of-type(8) {
-        animation-delay: .70s;
-      }
-    }
-  }
-  nav {
-    position: relative;
-    height: 70%;
-    top: 50%;;
-    transform: translateY(-50%);
-    text-align: right;
-  }
-  ul {
-      font-family: $font-p;
-      font-size: 1em;
-font-weight: 200;    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    position: relative;
-    height: 100%;
-
-    li {
-      display: block;
-      height: 15%;
-    //   height: calc(100% / 4);
-      min-height: 50px;
-      position: relative;
-      opacity: 0;
-      background-color: $color-light;
-
-
-      a {
-        background-color: $color-dark;
-        &:hover, &:focus, &:active {
-           color: $color-active;
-
+            li {
+                animation: fadeInRight .5s ease forwards;
+                animation-delay: .35s;
+                &:nth-of-type(2) {
+                    animation-delay: .4s;
+                }
+                &:nth-of-type(3) {
+                    animation-delay: .45s;
+                }
+                &:nth-of-type(4) {
+                    animation-delay: .50s;
+                }
+                &:nth-of-type(5) {
+                    animation-delay: .55s;
+                }
+                &:nth-of-type(6) {
+                    animation-delay: .60s;
+                }
+                &:nth-of-type(7) {
+                    animation-delay: .65s;
+                }
+                &:nth-of-type(8) {
+                    animation-delay: .70s;
+                }
+            }
         }
-      }
+    nav {
+        position: relative;
+        height: 70%;
+        top: 50%;;
+        transform: translateY(-50%);
+        text-align: right;
     }
-  }
+    ul {
+        font-family: $font-p;
+        font-size: 1em;
+        font-weight: 200;
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        li {
+            display: block;
+            height: 15%;
+            min-height: 50px;
+            position: relative;
+            opacity: 0;
+            a {
+                color: white;
+                padding: 10px;
+                text-decoration: none;
+                background-color: $color-dark;
+                &:hover, &:focus, &:active {
+                    color: $color-active;
+
+                }
+            }
+        }
+    }
 }
 //---------------------------------------------------
 // nav items fade in right
 //---------------------------------------------------
 @keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    right: 40%;
-  }
-  100% {
-    opacity: 1;
-    right: 0;
-  }
+    0% {
+        opacity: 0;
+        right: 800px;
+    }
+    100% {
+        opacity: 1;
+        right: 0;
+    }
 }
 //---------------------------------------------------
 // do not display on mobile
 //---------------------------------------------------
 @media screen and (min-width: $mobile-styles) {
-  .button_container{
-    display: $dont-show;
-  }
-  .overlay{
-    display: $dont-show;
-  }
+    .button_container {
+        display: $dont-show;
+    }
+    .overlay {
+        display: $dont-show;
+    }
 }
 
 //===========================
@@ -167,28 +161,25 @@ font-weight: 200;    list-style: none;
 //===========================
 
 .desktop-nav{
-text-align: right;
-  width: 100%;
-  // padding: -10px 10px 10px 10px;
-  margin: -68px  0  0 -23px;
-  font-family: $font-p;
-  font-size: .8em;
-  font-weight: 200;
-  a {
-    color: $color-light;
-    text-decoration: none;
-    padding: 0 7px 4px 7px;
-    transition: letter-spacing 1s;
-      &:hover,
-      &:focus,
-      &:active {
-          //  font-size: 1.2rem;
-           letter-spacing: .05rem;
-           color: $color-active;
-           background-color: $color-light;
-      }
-  }
-
+    text-align: right;
+    width: 100%;
+    margin: -68px  0  0 -14px;
+    font-family: $font-p;
+    font-size: .8em;
+    font-weight: 200;
+    a {
+        color: $color-light;
+        text-decoration: none;
+        padding: 0 7px 4px 7px;
+        transition: letter-spacing 1s;
+        &:hover,
+        &:focus,
+        &:active {
+            letter-spacing: .05rem;
+            color: $color-active;
+            background-color: $color-light;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {

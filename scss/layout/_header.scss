@@ -11,15 +11,16 @@ header{
         background-color: $color-dark;
         color: $color-light;
         a{
+            color: white;
+            text-decoration: none;
             letter-spacing: 1rem;
-                &:hover,
-                &:focus,
-                &:active {
-                    background-color: inherit;
-                    letter-spacing: .95rem;;
-                    color: $color-light;
-                    cursor: pointer;
-                }
+            transition: letter-spacing 1s;
+            &:hover, &:focus, &:active {
+                background-color: inherit;
+                letter-spacing: .90rem;;
+                color: $color-light;
+                cursor: pointer;
             }
         }
     }
+}
