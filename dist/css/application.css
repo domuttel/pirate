@@ -237,12 +237,10 @@ header {
   background-color: #000; }
 
 #contact {
-  margin-left: 5%;
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-around; }
   #contact img {
     width: 60%;
     max-width: 175px; }
@@ -254,14 +252,21 @@ header {
     #contact ul li {
       color: #000; }
       #contact ul li:hover, #contact ul li:focus, #contact ul li:active {
-        color: #FFF; }
+        color: red; }
 
-.artist-profiles .hidden-profile a:hover, .artist-profiles .hidden-profile a:focus, .artist-profiles .hidden-profile a:active {
-  background-color: white;
-  border-radius: 1000px; }
+.artist-profiles .hidden-profile a {
+  padding: 0; }
 
-.artist-profiles .hidden-profile a img {
-  width: 20%; }
+.artist-profiles .hidden-profile img {
+  width: 8%;
+  max-width: 35px; }
+  .artist-profiles .hidden-profile img:hover, .artist-profiles .hidden-profile img:focus, .artist-profiles .hidden-profile img:active {
+    background-color: pink; }
+
+#member {
+  display: flex;
+  flex-flow: row;
+  width: 100%; }
 
 .profile-images {
   width: 100px;
