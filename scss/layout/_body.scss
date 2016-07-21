@@ -96,26 +96,59 @@
 // styles for artist profiles
 //=================================================
 
-
+.artist-profile{
+    margin-top: -50px;
+    width: 100%;
+    height: auto;
+    // margin-top: -50px;
+    margin-left: 0;
+}
 
 .hidden-profile{
-    // display: nosne;
+    display: none;
+    .profile-image{
+        margin: 0;
+        padding: 0;
+        width: 100px;
+        height: 100px;
+        img {
+            border-radius: 50%;
+        }
+    }
+    .artworks {
+        .art{
+            width: 95%;
+            float: left;
+            padding: 2.5%;
+        }
+
+        .art:first-child {
+          margin-left: 0;
+        }
+        img{
+            width: 100%;
+        }
+    }
+
+
 }
-.artist-profiles{
-    width: 100%;
-    margin-top: -50px;
-    margin-left: 0;
+@media (min-width: 550px) {
     .hidden-profile{
-        .profile-image{
-            margin-top: -40px;
-            width: 60px;
-            height: 60px;;
-            border-radius: 100px;
-            background-image: url(../images/facebook_lg_b-02.png);
-            background-size: 100%;
-            background-color: grey;
-            background-size: cover;
-            background-position: center;
+        .artworks {
+            .art{
+                width: 50%;
+                padding:3%;
+            }
+        }
+    }
+}
+@media (#{$bp-larger-than-tablet}) {
+    .hidden-profile{
+        .artworks {
+            .art{
+                width: 25%;
+                padding:1%;
+            }
         }
     }
 }

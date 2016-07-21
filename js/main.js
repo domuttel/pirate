@@ -64,6 +64,27 @@ $(document).on('ready', function() {
     // });
 
 
+// $(".hidden-profile").hide();
+
+$(".artist-name").click(function() {
+
+    var box =  $(this).next(".hidden-profile");
+
+    if(box.is(":visible")){
+        box.slideUp(500);
+        return;
+    }
+
+    var visibleBoxes = $('.hidden-profile:visible')
+
+    if (visibleBoxes.length > 0) {
+        $('.hidden-profile:visible').slideUp(500);
+
+    }
+
+    box.slideDown(500);
+});
+// .next();
 
 
 });
