@@ -33,11 +33,33 @@ $(document).on('ready', function() {
 //---------------------------------------------------
 // background fade on scroll
 //---------------------------------------------------
-    $('#about').on( 'scroll', function(){
-		if ($('#about').scrollTop() > '2px') {
-			$('.background').css({opacity: ".05"});
-		};
-	});
+    // $('#about').on( 'scroll', function(){
+	// 	if ($('#about').scrollTop() > '2px') {
+	// 		$('.background').css({opacity: .05});
+	// 	};
+	// });
+
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 50) {
+        $('.background').addClass("fade-out");
+    }
+    else if (y < 50) {
+        $('.background').removeClass("fade-out");
+    }
+});
+
+// $(document).scroll(function () {
+// var y = $(this).scrollTop();
+// if (y > 50) {
+// $(’.sidebar’).fadeIn();
+// } if (y < 50) {
+// $(’.sidebar’).fadeOut();
+// }
+// });
+// $(document).ready(function() {
+// $(’.sidebar’).hide();
+// });
 //---------------------------------------------------
 // AJX for artist dat
 //---------------------------------------------------
@@ -67,22 +89,16 @@ $(document).on('ready', function() {
 // $(".hidden-profile").hide();
 
 $(".artist-name").click(function() {
-
-    var box =  $(this).next(".hidden-profile");
-
-    if(box.is(":visible")){
-        box.slideUp(500);
+    var $box =  $(this).next(".hidden-profile");
+    if($box.is(":visible")){
+        $box.slideUp(500);
         return;
     }
-
-    var visibleBoxes = $('.hidden-profile:visible')
-
+    var visibleBoxes = $('.hidden-profile:visible');
     if (visibleBoxes.length > 0) {
         $('.hidden-profile:visible').slideUp(500);
-
     }
-
-    box.slideDown(500);
+    $box.slideDown(500);
 });
 // .next();
 

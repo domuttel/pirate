@@ -102,6 +102,11 @@
     height: auto;
     // margin-top: -50px;
     margin-left: 0;
+    .artst-name{
+        &:hover, &:focus, &:active {
+
+        }
+    }
 }
 
 .hidden-profile{
@@ -112,6 +117,8 @@
         width: 100px;
         height: 100px;
         img {
+            width: 100%;
+            height: auto;
             border-radius: 50%;
         }
     }
@@ -120,14 +127,15 @@
             width: 95%;
             float: left;
             padding: 2.5%;
+            &:first-child {
+                margin-left: 0;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
         }
 
-        .art:first-child {
-          margin-left: 0;
-        }
-        img{
-            width: 100%;
-        }
     }
 
 

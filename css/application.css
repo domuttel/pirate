@@ -9,7 +9,8 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0;
-  overflow: auto; }
+  overflow: auto;
+  transition: all 2s; }
 
 h1 {
   font-size: 2rem;
@@ -454,15 +455,18 @@ header {
     width: 100px;
     height: 100px; }
     .hidden-profile .profile-image img {
+      width: 100%;
+      height: auto;
       border-radius: 50%; }
   .hidden-profile .artworks .art {
     width: 95%;
     float: left;
     padding: 2.5%; }
-  .hidden-profile .artworks .art:first-child {
-    margin-left: 0; }
-  .hidden-profile .artworks img {
-    width: 100%; }
+    .hidden-profile .artworks .art:first-child {
+      margin-left: 0; }
+    .hidden-profile .artworks .art img {
+      width: 100%;
+      height: auto; }
 
 @media (min-width: 550px) {
   .hidden-profile .artworks .art {
@@ -475,8 +479,7 @@ header {
     padding: 1%; } }
 
 .background {
-  color: #DADADA;
-  opacity: 1;
+  color: black;
   position: fixed;
   width: 100%;
   text-align: right;
@@ -486,7 +489,11 @@ header {
   flex-direction: column;
   justify-content: space-around;
   padding: 0 25px 0 0;
-  z-index: -5000; }
+  z-index: -5000;
+  transition: all .5s; }
+
+.fade-out {
+  color: #DADADA; }
 
 .footer {
   background-color: #000;

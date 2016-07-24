@@ -1,6 +1,6 @@
 .background{
-    color: #DADADA;
-    opacity: 1;
+    color: black;
+    // opacity: 1;
     position: fixed;
     width: 100%;
     text-align: right;
@@ -11,4 +11,12 @@
     justify-content: space-around;
     padding: 0 25px 0 0;
     z-index: $z-bottom;
+    transition: all .5s;
 }
+.fade-out{
+    color: #DADADA;
+    // transition: all 1s;
+}
+// .fade-in{
+//     color: black;
+// }
