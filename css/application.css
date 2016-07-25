@@ -378,14 +378,15 @@ header {
   justify-content: space-between; }
 
 .pirate-email {
-  width: 100px;
-  height: 100px;
+  width: 6em;
+  height: 6em;
   border: 1px cdcdb1 solid;
   background-size: 100px;
   background-image: url(../images/email_lg_g-01.png);
   background-repeat: no-repeat;
   border-radius: 1000px;
   background-size: 100%;
+  border: 1px solid #d3d3d3;
   transition: all .25s; }
   .pirate-email:hover {
     background-image: url(../images/email_lg_b-01.png);
@@ -395,12 +396,13 @@ header {
 
 .pirate-facebook {
   width: 6em;
-  height: 100px;
+  height: 6em;
   border: 1px  cdcdb1 solid;
   background-image: url(../images/facebook_lg_g-02.png);
   background-repeat: no-repeat;
   border-radius: 1000px;
   background-size: 100%;
+  border: 1px solid #d3d3d3;
   transition: all .25s; }
   .pirate-facebook:hover {
     background-color: rgba(111, 111, 111, 0.2);
@@ -409,31 +411,36 @@ header {
     height: 103px; }
 
 #contact {
+  visibility: visible;
+  margin-bottom: 4em;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between; }
-  #contact .main-buttons {
+  justify-content: space-around; }
+  #contact .main-buttons ul {
     display: flex;
-    align-items: center; }
-    #contact .main-buttons ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    #contact .main-buttons ul li {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      width: 110px;
+      flex-direction: row;
       align-items: center;
-      justify-content: space-around; }
-      #contact .main-buttons ul li {
-        display: flex;
-        justify-content: center;
-        width: 110px;
-        flex-direction: row;
-        align-items: center;
-        margin: -5px;
-        padding: 10px;
-        color: grey;
-        transition: all .5s; }
-        #contact .main-buttons ul li:hover, #contact .main-buttons ul li:focus, #contact .main-buttons ul li:active {
-          color: #000;
-          background-color: rgba(111, 111, 111, 0.2); }
+      margin: -5px;
+      padding: 10px;
+      color: grey;
+      border: 1px solid #d3d3d3;
+      transition: all .5s; }
+      #contact .main-buttons ul li:hover, #contact .main-buttons ul li:focus, #contact .main-buttons ul li:active {
+        color: #000;
+        background-color: rgba(111, 111, 111, 0.2);
+        font-size: 1.15rem;
+        font-weight: 400; }
+
+#login-form {
+  display: none; }
 
 .artist-profile {
   left: 0;
@@ -463,7 +470,25 @@ header {
 
 .footer {
   background-color: #000;
-  height: 30px;
-  width: 100%; }
+  height: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+  .footer span {
+    margin-right: 25px;
+    font-size: .25rem;
+    color: white; }
+
+#members input {
+  margin-top: 100px;
+  padding: 1rem 1rem .75rem 1rem; }
+
+.background-grey {
+  color: #d3d3d3; }
+
+#special-info {
+  width: 100%;
+  height: 100vh; }
 
 /*# sourceMappingURL=../maps/application.css.map */
