@@ -25,7 +25,7 @@ h1 {
 
 h2{
     @include heavyFont;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: .3rem;
     // margin-bottom: -30px;
     // line-height: 1.2rem;
@@ -33,7 +33,7 @@ h2{
 }
 h3{
     font-family: $font-p;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 200;
     // margin-bottom: -50px;
     // line-height: 1.2rem;
