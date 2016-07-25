@@ -14,6 +14,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 //===============================================
 // background images for fb & email
 //===============================================
@@ -93,74 +94,78 @@
 //=================================================
 
 .artist-profile{
+    left: 0;
     margin-top: -2.5rem;
     width: 100%;
     height: auto;
-    // margin-top: -50px;
     margin-left: 0;
-//     h3{
-//         border: 1px solid #d3d3d3;
-//         padding: 1rem;
-//         color: black;
-//         background-size: 2px;
-//         background-color: #d3d3d3;
-//         transition: all .5s;
-//         &:hover, &:focus, &:active {
-//             border: black dotted 1px;
-//             background-color: white;
-//             color:black;
+    span{
+        font-weight: 700;
+    }
+    // h3{
+    //     // margin: 0;
+    //     border: 1px solid #d3d3d3;
+    //     padding: .5rem;
+    //     color: black;
+    //     background-size: 2px;
+    //     background-color: #d3d3d3;
+    //     transition: all .5s;
+    //     &:hover, &:focus, &:active {
+    //         border: black dotted 1px;
+    //         background-color: white;
+    //         color:black;
+    //     }
+    // }
+}
+
+// .hidden-profile{
+//     display: none;
+//     .profile-image{
+//         margin: 0;
+//         padding: 0;
+//         width: 100px;
+//         height: 100px;
+//         img {
+//             width: 100%;
+//             height: auto;
+//             border-radius: 50%;
 //         }
 //     }
-}
-
-.hidden-profile{
-    display: none;
-    .profile-image{
-        margin: 0;
-        padding: 0;
-        width: 100px;
-        height: 100px;
-        img {
-            width: 100%;
-            height: auto;
-            border-radius: 50%;
-        }
-    }
-    .artworks {
-        .art{
-            width: 95%;
-            float: left;
-            padding: 2.5%;
-            &:first-child {
-                margin-left: 0;
-            }
-            img{
-                width: 100%;
-                height: auto;
-            }
-        }
-
-    }
-
-
-}
-@media (min-width: 550px) {
-    .hidden-profile{
-        .artworks {
-            .art{
-                width: 50%;
-                padding:3%;
-            }
-        }
-    }
-}
-@media (#{$bp-larger-than-tablet}) {
-    .hidden-profile{
-        .artworks {
-            .art{
-                width: 25%;
-                padding:1%;
-            }
-        }
-    }
-}
+//     .artworks {
+//         .art{
+//             width: 95%;
+//             float: left;
+//             padding: 2.5%;
+//             &:first-child {
+//                 margin-left: 0;
+//             }
+//             img{
+//                 width: 100%;
+//                 height: auto;
+//             }
+//         }
+//
+//     }
+//
+//
+// }
+// @media (min-width: 550px) {
+//     .hidden-profile{
+//         .artworks {
+//             .art{
+//                 width: 50%;
+//                 padding:3%;
+//             }
+//         }
+//     }
+// }
+// @media (#{$bp-larger-than-tablet}) {
+//     .hidden-profile{
+//         .artworks {
+//             .art{
+//                 width: 25%;
+//                 padding:1%;
+//             }
+//         }
+//     }
+// }

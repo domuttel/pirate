@@ -23,12 +23,12 @@ h1 {
 
 h2 {
   font-family: 'heavitas';
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: .3rem; }
 
 h3 {
   font-family: Athiti;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 200; }
 
 p {
@@ -47,6 +47,10 @@ ul {
   line-height: 1.5rem;
   letter-spacing: 0rem;
   list-style-type: none; }
+  ul li {
+    left: 0;
+    margin: 0;
+    padding: 0; }
 
 /*
 * Skeleton V2.0.4
@@ -80,11 +84,9 @@ ul {
 
 .column,
 .columns {
-  margin-top: 80px;
   width: 100%;
   float: left;
-  box-sizing: border-box;
-  margin-top: 5rem; }
+  box-sizing: border-box; }
 
 @media (min-width: 400px) {
   .body-wrap {
@@ -367,7 +369,7 @@ header {
         cursor: pointer; }
 
 .view-blocks {
-  margin-top: 800px; }
+  padding-top: 80px; }
 
 #map {
   width: 100%;
@@ -378,6 +380,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+
+#calendar div ul {
+  margin: inherit;
+  padding: 0; }
 
 .pirate-email {
   width: 100px;
@@ -411,7 +417,6 @@ header {
     height: 103px; }
 
 #contact {
-  margin-top: -10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -433,47 +438,19 @@ header {
         margin: -5px;
         padding: 10px;
         color: grey;
-        transition: all .25s; }
+        transition: all .5s; }
         #contact .main-buttons ul li:hover, #contact .main-buttons ul li:focus, #contact .main-buttons ul li:active {
           color: #000;
           background-color: rgba(111, 111, 111, 0.2); }
 
 .artist-profile {
-  margin-top: -50px;
+  left: 0;
+  margin-top: -2.5rem;
   width: 100%;
   height: auto;
   margin-left: 0; }
-
-.hidden-profile {
-  display: none; }
-  .hidden-profile .profile-image {
-    margin: 0;
-    padding: 0;
-    width: 100px;
-    height: 100px; }
-    .hidden-profile .profile-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 50%; }
-  .hidden-profile .artworks .art {
-    width: 95%;
-    float: left;
-    padding: 2.5%; }
-    .hidden-profile .artworks .art:first-child {
-      margin-left: 0; }
-    .hidden-profile .artworks .art img {
-      width: 100%;
-      height: auto; }
-
-@media (min-width: 550px) {
-  .hidden-profile .artworks .art {
-    width: 50%;
-    padding: 3%; } }
-
-@media (min-width: 768px) {
-  .hidden-profile .artworks .art {
-    width: 25%;
-    padding: 1%; } }
+  .artist-profile span {
+    font-weight: 700; }
 
 .background {
   color: black;

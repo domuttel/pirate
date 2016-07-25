@@ -42,43 +42,29 @@ $(document).on('ready', function() {
     });
 
 //---------------------------------------------------
-// AJAX for artist dat
+// AJAX for artist data
 //---------------------------------------------------
-// var
-    //
-    // var url = "../data/artists.json";
-    // $.getJSON(url, function (response) {
-    //     var statusHTML = '<h2>artists</h2> <div class="artist-profiles columns seven">';
-    //     $.each(response, function (index, artist) {
-    //         var hiddenInfo = '<div class="hidden-profile">';
-    //         var hiddenInfoClose = '</div>';
-    //         // var social = '<a href="'  + '"><img src="images/social-01.png" alt=""></a>';
-    //         var profilePic = '<div class="profile-images" style="background-image: url(' + artist.bioImage + ')"></div>';
-    //         statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>'
-    //                     + hiddenInfo +
-    //                     profilePic + artist.facebook + artist.twitter +  artist.instagram + artist.ello + artist.youtube + artist.linkedin + artist.vimeo +
-    //                     '<div id="member"> Member Type: ' + artist.memberType + '</div>' +
-    //
-    //                     '<p> Bio: ' + artist.bio + '</p>'
-    //                     + hiddenInfoClose;
-    //     });
-    //     statusHTML += '</div>';
-    //     $('#artists').html(statusHTML)
-    // });
 
-
-// $(".hidden-profile").hide();
-
-    $(".artist-name").click(function() {
-        var $box =  $(this).next(".hidden-profile");
-        if($box.is(":visible")){
-            $box.slideUp(500);
-            return;
-        }
-        var visibleBoxes = $('.hidden-profile:visible');
-        if (visibleBoxes.length > 0) {
-            $('.hidden-profile:visible').slideUp(500);
-        }
-        $box.slideDown(500);
+    var url = "../data/artists.json";
+    $.getJSON(url, function (response) {
+        var statusHTML = '<h2>artists</h2> <div class="artist-profile columns seven">';
+        $.each(response, function (index, artist) {
+            statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
+        });
+        statusHTML += '</div>';
+        $('#artists').html(statusHTML)
     });
+//********* click on artist to expand *********//
+    // $(".artist-name").click(function() {
+    //     var $box =  $(this).next(".hidden-profile");
+    //     if($box.is(":visible")){
+    //         $box.slideUp(500);
+    //         return;
+    //     }
+    //     var visibleBoxes = $('.hidden-profile:visible');
+    //     if (visibleBoxes.length > 0) {
+    //         $('.hidden-profile:visible').slideUp(500);
+    //     }
+    //     $box.slideDown(500);
+    // });
 });

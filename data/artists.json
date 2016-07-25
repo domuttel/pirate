@@ -1,8 +1,8 @@
 [
-
+{"firstName": "<span class='member-type'>Full Members</span>", "lastName": ""},
   {
    "firstName": "Nicole",
-   "lastName": " Banowetz",
+   "lastName": "  Banowetz",
 
        "memberType": "Full Member",
        "bioImage": "http://www.fillmurray.com/200/300",
@@ -26,6 +26,122 @@
            "imgOne": "image one",
            "imgTwo": "how two",
            "imgThree": "how three"
+  },
+  {
+   "firstName": "Justin",
+   "lastName": " Beard"
+  },
+  {
+   "firstName": "Phil",
+   "lastName": " Bender"
+  },
+  {
+   "firstName": "Michael",
+   "lastName": " Brohman"
+  },
+  {
+   "firstName": "BUG",
+   "lastName": " "
+  },
+  {
+   "firstName": "Rebecca",
+   "lastName": " Cuming"
+  },
+  {
+   "firstName": "Robert",
+   "lastName": " Green"
+  },
+  {
+   "firstName": "Shannon",
+   "lastName": " Kelly"
+  },
+  {
+   "firstName": "Charles",
+   "lastName": " Livingston"
+  },
+  {
+   "firstName": "Korri",
+   "lastName": " Marshall"
+  },
+  {
+   "firstName": "Tsogo",
+   "lastName": " Mijid"
+  },
+  {
+   "firstName": "Laura Phelps",
+   "lastName": " Rogers"
+  },
+  {
+   "firstName": "Louis",
+   "lastName": " Recchia"
+  },
+  {
+   "firstName": "Craig",
+   "lastName": " Robb"
+  },
+  {
+   "firstName": "Debra",
+   "lastName": " Sanders"
+  },
+{"firstName": "<span class='member-type'>Associate Members</span>", "lastName": ""},
+  {
+   "firstName": "Eric",
+   "lastName": " Anderson"
+  },
+  {
+   "firstName": "Walter",
+   "lastName": " Barton"
+  },
+  {
+   "firstName": "Brian",
+   "lastName": " Cavanaugh"
+  },
+  {
+   "firstName": "Chrissy",
+   "lastName": " Espinoza"
+  },
+  {
+   "firstName": "Dylan",
+   "lastName": " Gebbia-Richards"
+  },
+  {
+   "firstName": "Judith",
+   "lastName": " Grey"
+  },
+  {
+   "firstName": "Heather",
+   "lastName": " Kegal"
+  },
+  {
+   "firstName": "Lisa",
+   "lastName": " Kerns"
+  },
+  {
+   "firstName": "Maeve",
+   "lastName": " Leslie"
+  },
+  {
+   "firstName": "Chip",
+   "lastName": " Lynch"
+  },
+  {
+   "firstName": "William",
+   "lastName": " Manke"
+  },
+  {
+   "firstName": "Lucas",
+   "lastName": " McMahon"
+  },
+  {
+   "firstName": "Dominic",
+   "lastName": " Muttel"
+  },
+  {
+   "firstName": "Kat",
+   "lastName": " Nechleba"
+  },
+  {
+   "firstName": "Alicia",
+   "lastName": " Ordal"
   }
-
 ]
