@@ -205,7 +205,7 @@ ul {
   .button_container span {
     background: #FFF;
     border: none;
-    height: 4px;
+    height: 5px;
     width: 100%;
     position: absolute;
     top: 0;
@@ -298,7 +298,7 @@ ul {
 .desktop-nav {
   text-align: right;
   width: 100%;
-  margin: -68px  0  0 -14px;
+  margin: -65px  0  0 -14px;
   font-family: Athiti;
   font-size: .8em;
   font-weight: 200; }
@@ -378,14 +378,15 @@ header {
   justify-content: space-between; }
 
 .pirate-email {
-  width: 100px;
-  height: 100px;
+  width: 6em;
+  height: 6em;
   border: 1px cdcdb1 solid;
   background-size: 100px;
   background-image: url(../images/email_lg_g-01.png);
   background-repeat: no-repeat;
   border-radius: 1000px;
   background-size: 100%;
+  border: 1px solid #d3d3d3;
   transition: all .25s; }
   .pirate-email:hover {
     background-image: url(../images/email_lg_b-01.png);
@@ -395,12 +396,13 @@ header {
 
 .pirate-facebook {
   width: 6em;
-  height: 100px;
+  height: 6em;
   border: 1px  cdcdb1 solid;
   background-image: url(../images/facebook_lg_g-02.png);
   background-repeat: no-repeat;
   border-radius: 1000px;
   background-size: 100%;
+  border: 1px solid #d3d3d3;
   transition: all .25s; }
   .pirate-facebook:hover {
     background-color: rgba(111, 111, 111, 0.2);
@@ -409,68 +411,44 @@ header {
     height: 103px; }
 
 #contact {
+  margin-bottom: 4em;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between; }
-  #contact .main-buttons {
+  justify-content: space-around; }
+  #contact .main-buttons ul {
     display: flex;
-    align-items: center; }
-    #contact .main-buttons ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    #contact .main-buttons ul li {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      width: 110px;
+      flex-direction: row;
       align-items: center;
-      justify-content: space-around; }
-      #contact .main-buttons ul li {
-        display: flex;
-        justify-content: center;
-        width: 110px;
-        flex-direction: row;
-        align-items: center;
-        margin: -5px;
-        padding: 10px;
-        color: grey;
-        transition: all .5s; }
-        #contact .main-buttons ul li:hover, #contact .main-buttons ul li:focus, #contact .main-buttons ul li:active {
-          color: #000;
-          background-color: rgba(111, 111, 111, 0.2); }
+      margin: -5px;
+      padding: 10px;
+      color: grey;
+      border: 1px solid #d3d3d3;
+      transition: all .5s; }
+      #contact .main-buttons ul li:hover, #contact .main-buttons ul li:focus, #contact .main-buttons ul li:active {
+        color: #000;
+        background-color: rgba(111, 111, 111, 0.2);
+        font-size: 1.15rem;
+        font-weight: 400; }
+
+#login-form {
+  visibility: hidden; }
 
 .artist-profile {
+  left: 0;
   margin-top: -2.5rem;
   width: 100%;
   height: auto;
   margin-left: 0; }
-
-.hidden-profile {
-  display: none; }
-  .hidden-profile .profile-image {
-    margin: 0;
-    padding: 0;
-    width: 100px;
-    height: 100px; }
-    .hidden-profile .profile-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 50%; }
-  .hidden-profile .artworks .art {
-    width: 95%;
-    float: left;
-    padding: 2.5%; }
-    .hidden-profile .artworks .art:first-child {
-      margin-left: 0; }
-    .hidden-profile .artworks .art img {
-      width: 100%;
-      height: auto; }
-
-@media (min-width: 550px) {
-  .hidden-profile .artworks .art {
-    width: 50%;
-    padding: 3%; } }
-
-@media (min-width: 768px) {
-  .hidden-profile .artworks .art {
-    width: 25%;
-    padding: 1%; } }
+  .artist-profile span {
+    font-weight: 700; }
 
 .background {
   color: black;
