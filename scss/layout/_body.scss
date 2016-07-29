@@ -94,9 +94,17 @@
         }
     }
 }
+//***********************************************
+// LOGIN FORM STYLES*****************************
+//***********************************************
 #login-form{
-    // visibility: hidden;
     display: none;
+    padding: 0;
+    margin: 0;
+    span{
+        // width: 155px;
+        color: green;
+    }
 }
 //=================================================
 // styles for artist profiles
