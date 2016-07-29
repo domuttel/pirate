@@ -107,12 +107,11 @@ $(document).on('ready', function() {
                 "<span><a href='#announcments'>MEETINGS / DUES</a></span>" +
                 "<span><a href='#announcments'>RULES</a></span>" +
                 "<span>SHOW:</span>" +
-                "<span><a href='#announcments'>PRE</a></span>" +
+                "<span><a href='#announcments'>BEFORE</a></span>" +
                 "<span><a href='#announcments'>DURING</a></span>" +
-                "<span><a href='#announcments'>POST</a></span>" +
+                "<span><a href='#announcments'>AFTER</a></span>" +
                 "<span><a href='#announcments'>CONTACT LIST</a></span>" +
-                "<span><a href='#announcments'>LIASONS</a></span>"
-            );
+                "<span><a href='#announcments'>LIASONS</a></span>");
             $(".background").addClass('background-grey');
             $("#public").toggle();
             $("#members").load("../data/member.html");

@@ -1,8 +1,10 @@
 [
-{"firstName": "<span class='member-type'>Full Members</span>", "lastName": ""},
+{"firstName": "<span class='member-type'>Members</span>", "lastName": ""},
   {
    "firstName": "Nicole",
    "lastName": "  Banowetz",
+   "email": "n.a.banowetz@gmail.com",
+   "phone": "",
 
        "memberType": "Full Member",
        "bioImage": "http://www.fillmurray.com/200/300",
@@ -29,119 +31,177 @@
   },
   {
    "firstName": "Justin",
-   "lastName": " Beard"
+   "lastName": " Beard",
+   "email": "jbeard@hotmail.com",
+   "phone": "(303)408-1468"
   },
   {
    "firstName": "Phil",
-   "lastName": " Bender"
+   "lastName": " Bender",
+   "email": "COMING SOON!",
+   "phone": "(303)909-5748"
   },
   {
    "firstName": "Michael",
-   "lastName": " Brohman"
+   "lastName": " Brohman",
+   "email": "mbrohman43@gmail.com",
+   "phone": "(303)433-7833"
   },
   {
    "firstName": "BUG",
-   "lastName": " "
+   "lastName": "",
+   "email": "bug@bug-art.com",
+   "phone": "(303)744-2826 or (303)520-6865"
   },
   {
    "firstName": "Rebecca",
-   "lastName": " Cuming"
+   "lastName": " Cuming",
+   "email": " rcumingstudio@comcast.net",
+   "phone": ""
   },
   {
    "firstName": "Robert",
-   "lastName": " Green"
+   "lastName": " Green",
+   "email": "davisgreen.robert@gmail.com",
+   "phone": ""
   },
   {
    "firstName": "Shannon",
-   "lastName": " Kelly"
+   "lastName": " Kelly",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Charles",
-   "lastName": " Livingston"
+   "lastName": " Livingston",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Korri",
-   "lastName": " Marshall"
+   "lastName": " Marshall",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Tsogo",
-   "lastName": " Mijid"
+   "lastName": " Mijid",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Laura Phelps",
-   "lastName": " Rogers"
+   "lastName": " Rogers",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Louis",
-   "lastName": " Recchia"
+   "lastName": " Recchia",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Craig",
-   "lastName": " Robb"
+   "lastName": " Robb",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Debra",
-   "lastName": " Sanders"
+   "lastName": " Sanders",
+   "email": "",
+   "phone": ""
   },
-{"firstName": "<span class='member-type'>Associate Members</span>", "lastName": ""},
+{"firstName": "<span class='member-type'>Associates</span>", "lastName": ""},
   {
    "firstName": "Eric",
-   "lastName": " Anderson"
+   "lastName": " Anderson",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Walter",
-   "lastName": " Barton"
+   "lastName": " Barton",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Brian",
-   "lastName": " Cavanaugh"
+   "lastName": " Cavanaugh",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Chrissy",
-   "lastName": " Espinoza"
+   "lastName": " Espinoza",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Dylan",
-   "lastName": " Gebbia-Richards"
+   "lastName": " Gebbia-Richards",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Judith",
-   "lastName": " Grey"
+   "lastName": " Grey",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Heather",
-   "lastName": " Kegal"
+   "lastName": " Kegal",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Lisa",
-   "lastName": " Kerns"
+   "lastName": " Kerns",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Maeve",
-   "lastName": " Leslie"
+   "lastName": " Leslie",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Chip",
-   "lastName": " Lynch"
+   "lastName": " Lynch",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "William",
-   "lastName": " Manke"
+   "lastName": " Manke",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Lucas",
-   "lastName": " McMahon"
+   "lastName": " McMahon",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Dominic",
-   "lastName": " Muttel"
+   "lastName": " Muttel",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Kat",
-   "lastName": " Nechleba"
+   "lastName": " Nechleba",
+   "email": "",
+   "phone": ""
   },
   {
    "firstName": "Alicia",
-   "lastName": " Ordal"
+   "lastName": " Ordal",
+   "email": "",
+   "phone": ""
   }
 ]
