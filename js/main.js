@@ -79,10 +79,12 @@ $(document).on('ready', function() {
         $("#login-form").toggle();
     });
 // LOGOUT
-    $("#members").click("input:button[name='logout']", function() {
-        $("#members").toggle();
-        $("#public").toggle();
-    });
+$( '#members' ).on("click", "input[name='logout-member']", function(e) {
+    e.preventDefault();
+    $( "#members" ).children().remove();
+    $("#public").toggle();
+});
+
 // LOGIN
     $("input:button[name='submit']").click(function(){
         var name = $("input:text[name='name']").val();
@@ -101,17 +103,17 @@ $(document).on('ready', function() {
             //     "<li><a href='#announcments'>CONTACT LIST</a></li>" +
             //     "<li><a href='#announcments'>LIASONS</a></li>"
             // );
-            $(".main-nav").toggle();
-            $(".desktop-nav").html(
-                "<span><a href='#announcments'>ANNOUNCMENTS</a></span>" +
-                "<span><a href='#announcments'>MEETINGS / DUES</a></span>" +
-                "<span><a href='#announcments'>RULES</a></span>" +
-                "<span>SHOW:</span>" +
-                "<span><a href='#announcments'>BEFORE</a></span>" +
-                "<span><a href='#announcments'>DURING</a></span>" +
-                "<span><a href='#announcments'>AFTER</a></span>" +
-                "<span><a href='#announcments'>CONTACT LIST</a></span>" +
-                "<span><a href='#announcments'>LIASONS</a></span>");
+            // $(".main-nav").toggle();
+            // $(".desktop-nav").html(
+            //     "<span><a href='#announcments'>ANNOUNCMENTS</a></span>" +
+            //     "<span><a href='#announcments'>MEETINGS / DUES</a></span>" +
+            //     "<span><a href='#announcments'>RULES</a></span>" +
+            //     "<span>SHOW:</span>" +
+            //     "<span><a href='#announcments'>BEFORE</a></span>" +
+            //     "<span><a href='#announcments'>DURING</a></span>" +
+            //     "<span><a href='#announcments'>AFTER</a></span>" +
+            //     "<span><a href='#announcments'>CONTACT LIST</a></span>" +
+            //     "<span><a href='#announcments'>LIASONS</a></span>");
             $(".background").addClass('background-grey');
             $("#public").toggle();
             $("#members").load("../data/member.html");

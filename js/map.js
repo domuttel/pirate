@@ -51,7 +51,6 @@ function initMap() {
               { "lightness": -100 }
           ]
       },{
-      },{
           "featureType": "poi",
           "elementType": "geometry",
           "stylers": [
@@ -64,7 +63,6 @@ function initMap() {
           "stylers": [
               { "visibility": "off" }
           ]
-      },{
       }
   ];
 var myLatLng = {lat:39.76787109999999, lng: -105.00435830000004};
