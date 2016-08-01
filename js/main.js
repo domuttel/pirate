@@ -70,22 +70,28 @@ $(document).on('ready', function() {
 //---------------------------------------------------
 // AJAX for members / Temp login
 //---------------------------------------------------
-// var membersUrl = "../data/member.html";
-// $.getJSON(membersUrl, function (response) {
-//     });
 // SHOW MEMBER LOGIN
     $("#member-login").click( function(){
         $("#contact").toggle();
         $("#login-form").toggle();
     });
 // LOGOUT
-$( '#members' ).on("click", "input[name='logout-member']", function(e) {
-    e.preventDefault();
-    $( "#members" ).children().remove();
-    $("#public").toggle();
-});
+    $( '#members' ).on("click", "input[name='logout-member']", function(e) {
+        e.preventDefault();
+        $( "#members" ).children().remove();
+        $("#public").toggle();
+    });
 
 // LOGIN
+// removeLast += allList.slice(0, -1);
+// removeFirst += removeLast.slice(1);
+function removeFirstLast(string){
+    var firstChar = "";
+    var lastChar = "";
+    lastChar = string.slice(0, -1);
+    firstChar = lastChar.slice(1);
+    return firstChar;
+};
     $("input:button[name='submit']").click(function(e){
         e.preventDefault();
         var name = $("input:text[name='name']").val();
@@ -99,9 +105,30 @@ $( '#members' ).on("click", "input[name='logout-member']", function(e) {
             $.getJSON(url, function (response) {
                 var statusHTML = '';
                 $.each(response, function (index, artist) {
-                    statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + artist.email + '<br>' + artist.phone + '</p>';
+                    if( artist.memberType === "Member") {
+                        statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + artist.email + '<br>' + artist.phone + '</p>';
+                    } else {
+                        statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + artist.email + '<br>' + artist.phone + '</p>';
+                    }
                 });
                 $('#member-contact').html(statusHTML)
+            });
+            //##############################
+            // EMAIL ALL Link
+            //##############################
+            var email = '<a href="mailto:info@pirateartonline.org?cc=';
+            $.getJSON(url, function (response) {
+                var allList = '';
+                var removeLast = '';
+                var removeFirst = '';
+                $.each(response, function (index, artist) {
+                    allList += artist.email + ',';
+                });
+                removeLast += allList.slice(0, -1);
+                removeFirst += removeLast.slice(1);
+                $("#email-all").html(email + removeFirst + '">Email ALL Pirates</a>');
+
+
             });
             $("#contact").toggle();
             $("#login-form").toggle();
@@ -111,4 +138,5 @@ $( '#members' ).on("click", "input[name='logout-member']", function(e) {
             $("#login-form").toggle();
         }
     });
+
 });// END ONLOAD

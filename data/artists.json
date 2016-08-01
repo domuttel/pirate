@@ -6,7 +6,7 @@
    "email": "n.a.banowetz@gmail.com",
    "phone": "",
 
-       "memberType": "Full Member",
+       "memberType": "Member",
        "bioImage": "http://www.fillmurray.com/200/300",
 
             "bio":   "Davy Jones Locker driver fluke warp barque cackle fruit Jack Ketch clap of thunder code Davy Jones Locker driver fluke warp barque cackle fruit Jack Ketch clap of thunder code Davy Jones Locker driver fluke warp barque cackle fruit Jack Ketch clap of thunder code Davy Jones Locker driver fluke warp barque cackle fruit Jack Ketch clap of thunder code Davy Jones Locker driver fluke warp barque cackle fruit Jack Ketch clap of thunder code",
@@ -33,181 +33,211 @@
    "firstName": "Justin",
    "lastName": " Beard",
    "email": "jbeard@hotmail.com",
-   "phone": "(303)408-1468"
+   "phone": "(303)408-1468",
+   "memberType": "Member"
   },
   {
    "firstName": "Phil",
    "lastName": " Bender",
-   "email": "COMING SOON!",
-   "phone": "(303)909-5748"
+   "email": "",
+   "phone": "(303)909-5748",
+   "memberType": "Member"
   },
   {
    "firstName": "Michael",
    "lastName": " Brohman",
    "email": "mbrohman43@gmail.com",
-   "phone": "(303)433-7833"
+   "phone": "(303)433-7833",
+   "memberType": "Member"
   },
   {
    "firstName": "BUG",
    "lastName": "",
    "email": "bug@bug-art.com",
-   "phone": "(303)744-2826 or (303)520-6865"
+   "phone": "(303)744-2826 or (303)520-6865",
+   "memberType": "Member"
   },
   {
    "firstName": "Rebecca",
    "lastName": " Cuming",
    "email": " rcumingstudio@comcast.net",
-   "phone": ""
+   "phone": "",
+   "memberType": "Member"
   },
   {
    "firstName": "Robert",
    "lastName": " Green",
    "email": "davisgreen.robert@gmail.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Member"
   },
   {
    "firstName": "Shannon",
    "lastName": " Kelly",
    "email": "shannon@shannonwkelly.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Member"
   },
   {
    "firstName": "Charles",
    "lastName": " Livingston",
    "email": "admin@charleslivingstonstudio.com",
-   "phone": "(720)354-7249"
+   "phone": "(720)354-7249",
+   "memberType": "Member"
   },
   {
    "firstName": "Korri",
    "lastName": " Marshall",
    "email": "korri0207@aol.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Member"
   },
   {
    "firstName": "Tsogo",
    "lastName": " Mijid",
    "email": "tsogo_baja@yahoo.com",
-   "phone": "(303)3388344"
+   "phone": "(303)3388344",
+   "memberType": "Member"
   },
   {
    "firstName": "Laura Phelps",
    "lastName": " Rogers",
    "email": "lauraphelpsrogers@hotmail.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Member"
   },
   {
    "firstName": "Louis",
    "lastName": " Recchia",
    "email": "louisrecchia@gmail.com ",
-   "phone": "(970)532-4287"
+   "phone": "(970)532-4287",
+   "memberType": "Member"
   },
   {
    "firstName": "Craig",
    "lastName": " Robb",
    "email": "craiger3d@gmail.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Member"
   },
   {
    "firstName": "Debra",
    "lastName": " Sanders",
    "email": "dbrae@msn.com",
-   "phone": "(303)940-3542"
+   "phone": "(303)940-3542",
+   "memberType": "Member"
   },
 {"firstName": "<span class='member-type'>Associates</span>", "lastName": "", "email": "", "phone": ""},
   {
    "firstName": "Eric",
    "lastName": " Anderson",
    "email": "ericanderson602@gmail.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Associate"
   },
   {
    "firstName": "Walter",
    "lastName": " Barton",
    "email": "12barton@gmail.com",
-   "phone": "(303)321-0734"
+   "phone": "(303)321-0734",
+   "memberType": "Associate"
   },
   {
    "firstName": "Brian",
    "lastName": " Cavanaugh",
    "email": "brianleecavanaugh@yahoo.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Associate"
   },
   {
    "firstName": "Chrissy",
    "lastName": " Espinoza",
    "email": "chrissymode@gmail.com",
-   "phone": "(719)320-0376"
+   "phone": "(719)320-0376",
+   "memberType": "Associate"
   },
   {
    "firstName": "Dylan",
    "lastName": " Gebbia-Richards",
    "email": "dylan.gebbiarichards@colorado.edu",
-   "phone": "(203)362-9164"
+   "phone": "(203)362-9164",
+   "memberType": "Associate"
   },
   {
    "firstName": "Judith",
    "lastName": " Grey",
    "email": "heyjudekiwi@gmail.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Associate"
   },
   {
    "firstName": "Heather",
    "lastName": " Kegal",
    "email": "coloradoheatherk@q.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Associate"
   },
   {
    "firstName": "Lisa",
    "lastName": " Kerns",
    "email": "lisa@lisamkerns-fineart.com",
-   "phone": "(303)807-3231"
+   "phone": "(303)807-3231",
+   "memberType": "Associate"
   },
   {
    "firstName": "Maeve",
    "lastName": " Leslie",
    "email": "mleslie279@gmail.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Associate"
   },
   {
    "firstName": "Chip",
    "lastName": " Lynch",
    "email": "chiplynch@mac.com",
-   "phone": "(303)875-4428"
+   "phone": "(303)875-4428",
+   "memberType": "Associate"
   },
   {
    "firstName": "William",
    "lastName": " Manke",
    "email": "supermagicland@gmail.com",
-   "phone": "(303)281-3751"
+   "phone": "(303)281-3751",
+   "memberType": "Associate"
   },
   {
    "firstName": "Lucas",
    "lastName": " McMahon",
    "email": "lucas.mcmahon@live.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Associate"
   },
   {
    "firstName": "Dominic",
    "lastName": " Muttel",
    "email": "dominic.muttel@gmail.com",
-   "phone": "(970)420-6721"
+   "phone": "(970)420-6721",
+   "memberType": "Associate"
   },
   {
    "firstName": "Kat",
    "lastName": " Nechleba",
    "email": "knechleba@gmail.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Associate"
   },
   {
    "firstName": "Alicia",
    "lastName": " Ordal",
    "email": "aliciaisordal@gmail.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Associate"
   },
   {
    "firstName": "Noah",
    "lastName": " Sodano",
    "email": "mosesgoat@mac.com",
-   "phone": ""
+   "phone": "",
+   "memberType": "Associate"
   }
 ]
