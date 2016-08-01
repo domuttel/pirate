@@ -1,5 +1,5 @@
 [
-{"firstName": "<span class='member-type'>Members</span>", "lastName": ""},
+{"firstName": "<span class='member-type'>Members</span>", "lastName": "", "email": "", "phone": ""},
   {
    "firstName": "Nicole",
    "lastName": "  Banowetz",
@@ -113,7 +113,7 @@
    "email": "dbrae@msn.com",
    "phone": "(303)940-3542"
   },
-{"firstName": "<span class='member-type'>Associates</span>", "lastName": ""},
+{"firstName": "<span class='member-type'>Associates</span>", "lastName": "", "email": "", "phone": ""},
   {
    "firstName": "Eric",
    "lastName": " Anderson",

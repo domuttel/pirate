@@ -86,37 +86,25 @@ $( '#members' ).on("click", "input[name='logout-member']", function(e) {
 });
 
 // LOGIN
-    $("input:button[name='submit']").click(function(){
+    $("input:button[name='submit']").click(function(e){
+        e.preventDefault();
         var name = $("input:text[name='name']").val();
         var pass = $("input:text[name='password']").val();
-        // var insertAfter = $()
         if( name === "pirate" && pass === "16") {
-            // $(".main-mobile-nav").hide();
-            // $("mobile-nav").html(
-            //     "<li><a <a href='#announcments'>ANNOUNCMENTS</a></li>" +
-            //     "<li><a href='#announcments'>MEETINGS / DUES</a></li>" +
-            //     "<li><a href='#announcments'>RULES</a></li>" +
-            //     "<li>SHOW:</li>" +
-            //     "<li><a href='#announcments'>PRE</a></li>" +
-            //     "<li><a href='#announcments'>DURING</a></li>" +
-            //     "<li><a href='#announcments'>POST</a></li>" +
-            //     "<li><a href='#announcments'>CONTACT LIST</a></li>" +
-            //     "<li><a href='#announcments'>LIASONS</a></li>"
-            // );
-            // $(".main-nav").toggle();
-            // $(".desktop-nav").html(
-            //     "<span><a href='#announcments'>ANNOUNCMENTS</a></span>" +
-            //     "<span><a href='#announcments'>MEETINGS / DUES</a></span>" +
-            //     "<span><a href='#announcments'>RULES</a></span>" +
-            //     "<span>SHOW:</span>" +
-            //     "<span><a href='#announcments'>BEFORE</a></span>" +
-            //     "<span><a href='#announcments'>DURING</a></span>" +
-            //     "<span><a href='#announcments'>AFTER</a></span>" +
-            //     "<span><a href='#announcments'>CONTACT LIST</a></span>" +
-            //     "<span><a href='#announcments'>LIASONS</a></span>");
             $(".background").addClass('background-grey');
             $("#public").toggle();
+            // ADD MEMBERS
             $("#members").load("../data/member.html");
+            // ADD EMAIL LIST
+            $.getJSON(url, function (response) {
+                var statusHTML = '';
+                $.each(response, function (index, artist) {
+                    statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + artist.email + '<br>' + artist.phone + '</p>';
+                });
+                $('#member-contact').html(statusHTML)
+            });
+            $("#contact").toggle();
+            $("#login-form").toggle();
         } else {
             alert("Incorrect Password");
             $("#contact").toggle();
