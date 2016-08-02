@@ -47,11 +47,23 @@ $(document).on('ready', function() {
 
     var url = "../data/artists.json";
     $.getJSON(url, function (response) {
-        var statusHTML = '<h2>artists</h2> <div class="artist-profile columns seven">';
+        var associates = '<h3>ASSOCIATES</h3>';
+        var members = '<h3>MEMBERS</h3>';
+        var statusHTML = '';
         $.each(response, function (index, artist) {
+        if( artist.memberType === "Member") {
+            statusHTML += '<div class="artist-profile columns seven">';
             statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
-        });
-        statusHTML += '</div>';
+            statusHTML += '</div>';
+        } else {
+            statusHTML += '<div class="artist-profile columns seven">';
+            statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
+            statusHTML += '</div>';
+        }
+                });
+        // $.each(response, function (index, artist) {
+        //     statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
+        // });
         $('#artists').html(statusHTML)
     });
 //********* click on artist to expand *********//
@@ -113,12 +125,13 @@ $(document).on('ready', function() {
             var phoneTagEnd = '">';
             var phoneTagClose = '</a>';
             var statusHTML = '';
+
             $.getJSON(url, function (response) {
                 $.each(response, function (index, artist) {
                     if( artist.memberType === "Member") {
                         statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
                     } else {
-                        statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
+                        statusHTML +=  '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
                     }
                 });
                 $('#member-contact').html(statusHTML)
@@ -161,7 +174,9 @@ $(document).on('ready', function() {
             $("#login-form").toggle();
         }
     });
-
+    $("input:text").focus(function() {
+      this.value = "";
+    });
 });// END ONLOAD
 
 

@@ -1,11 +1,8 @@
-/* Or directly:
-$fonts: Kavoon, Wendy One, Bonbon;
-*/
 * {
   box-sizing: border-box; }
 
 body {
-  font-family: 'heavitas';
+  font-family: "Athiti", Courier, monospace;
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -13,6 +10,7 @@ body {
   transition: all 2s; }
 
 h1 {
+  font-family: 'heavitas';
   font-size: 2rem;
   letter-spacing: .2rem; }
 
@@ -27,21 +25,18 @@ h2 {
   letter-spacing: .3rem; }
 
 h3 {
-  font-family: Athiti;
   font-size: 1.5em;
   font-weight: 200; }
 
 p {
-  font-family: Athiti;
   font-size: 1.3em;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.75rem;
   letter-spacing: .25rem; }
 
 ul {
   margin: 0;
   padding: 0;
-  font-family: Athiti;
   font-size: 1em;
   font-weight: 200;
   line-height: 1.5rem;
@@ -180,6 +175,31 @@ ul {
   display: table;
   clear: both; }
 
+input {
+  font-weight: 300;
+  font-size: 1.15em;
+  margin-bottom: 1em;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px dotted #d3d3d3;
+  width: 100%;
+  padding: 10px;
+  color: #000; }
+  input[type=button] {
+    width: 30%;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 10px;
+    color: #000;
+    border: 1px solid #d3d3d3;
+    transition: all .5s; }
+    input[type=button]:hover, input[type=button]:focus, input[type=button]:active {
+      color: #000;
+      background-color: rgba(111, 111, 111, 0.2);
+      font-size: 1.25rem;
+      font-weight: 400; }
+
 .button_container {
   position: fixed;
   top: 21px;
@@ -258,7 +278,7 @@ ul {
     transform: translateY(-50%);
     text-align: right; }
   .overlay ul {
-    font-family: Athiti;
+    font-family: 'Athiti';
     font-size: 1em;
     font-weight: 200;
     list-style: none;
@@ -299,7 +319,7 @@ ul {
   text-align: right;
   width: 100%;
   margin: -68px  0  0 -14px;
-  font-family: Athiti;
+  font-family: 'Athiti';
   font-size: .9em;
   font-weight: 200; }
   .desktop-nav a {
@@ -367,9 +387,12 @@ header {
 .view-blocks {
   padding-top: 80px; }
 
+.date {
+  font-weight: 500; }
+
 #map {
   width: 100%;
-  height: 200px; }
+  height: 250px; }
 
 #home {
   height: 100vh;
@@ -383,38 +406,34 @@ header {
 .pirate-main-nav {
   display: none; }
 
+#calendar ul {
+  margin: 0; }
+
 .pirate-email {
-  width: 6em;
-  height: 6em;
-  border: 1px cdcdb1 solid;
-  background-size: 100px;
-  background-image: url(../images/email_lg_g-01.png);
-  background-repeat: no-repeat;
+  background-image: url(../images/email_lg_b-01.png);
+  width: 5em;
+  height: 5em;
   border-radius: 1000px;
-  background-size: 100%;
-  border: 1px solid #d3d3d3;
-  transition: all .25s; }
+  background-size: 5em;
+  border: 1px dotted #000;
+  background-position: center;
+  transition: all .5s; }
   .pirate-email:hover {
-    background-image: url(../images/email_lg_b-01.png);
-    background-color: rgba(111, 111, 111, 0.2);
-    width: 103px;
-    height: 103px; }
+    background-size: 5em;
+    background-color: rgba(111, 111, 111, 0.2); }
 
 .pirate-facebook {
-  width: 6em;
-  height: 6em;
-  border: 1px  cdcdb1 solid;
-  background-image: url(../images/facebook_lg_g-02.png);
-  background-repeat: no-repeat;
+  background-image: url(../images/facebook_lg_b-02.png);
+  background-size: 5em;
+  background-position: center;
+  width: 5em;
+  height: 5em;
+  border: 1px dotted #000;
   border-radius: 1000px;
-  background-size: 100%;
-  border: 1px solid #d3d3d3;
-  transition: all .25s; }
+  transition: all .5s; }
   .pirate-facebook:hover {
-    background-color: rgba(111, 111, 111, 0.2);
-    background-image: url(../images/facebook_lg_b-02.png);
-    width: 103px;
-    height: 103px; }
+    background-size: 5em;
+    background-color: rgba(111, 111, 111, 0.2); }
 
 #contact {
   visibility: visible;
@@ -424,6 +443,8 @@ header {
   align-items: center;
   justify-content: space-around; }
   #contact .main-buttons ul {
+    font-size: 1.15em;
+    font-weight: 300;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -436,21 +457,19 @@ header {
       align-items: center;
       margin: -5px;
       padding: 10px;
-      color: grey;
-      border: 1px solid #d3d3d3;
+      color: #000;
+      border: 1px dotted #000;
       transition: all .5s; }
       #contact .main-buttons ul li:hover, #contact .main-buttons ul li:focus, #contact .main-buttons ul li:active {
         color: #000;
         background-color: rgba(111, 111, 111, 0.2);
-        font-size: 1.15rem;
+        font-size: 1.25rem;
         font-weight: 400; }
 
 #login-form {
   display: none;
-  padding: 0;
-  margin: 0; }
-  #login-form span {
-    color: green; }
+  margin: 0 0 2em 0;
+  text-align: center; }
 
 .artist-profile {
   left: 0;
@@ -491,8 +510,12 @@ header {
     color: white; }
 
 #members input {
-  margin-top: 100px;
-  padding: 1rem 1rem .75rem 1rem; }
+  width: 100%;
+  margin-top: 100px; }
+
+#members h3 {
+  font-weight: 400;
+  border-bottom: dotted #000 1px; }
 
 .background-grey {
   color: #d3d3d3; }

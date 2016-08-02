@@ -387,9 +387,12 @@ header {
 .view-blocks {
   padding-top: 80px; }
 
+.date {
+  font-weight: 500; }
+
 #map {
   width: 100%;
-  height: 200px; }
+  height: 250px; }
 
 #home {
   height: 100vh;
@@ -403,38 +406,34 @@ header {
 .pirate-main-nav {
   display: none; }
 
+#calendar ul {
+  margin: 0; }
+
 .pirate-email {
-  width: 6em;
-  height: 6em;
-  border: 1px cdcdb1 solid;
-  background-size: 100px;
-  background-image: url(../images/email_lg_g-01.png);
-  background-repeat: no-repeat;
+  background-image: url(../images/email_lg_b-01.png);
+  width: 5em;
+  height: 5em;
   border-radius: 1000px;
-  background-size: 100%;
-  border: 1px solid #d3d3d3;
-  transition: all .25s; }
+  background-size: 5em;
+  border: 1px dotted #000;
+  background-position: center;
+  transition: all .5s; }
   .pirate-email:hover {
-    background-image: url(../images/email_lg_b-01.png);
-    background-color: rgba(111, 111, 111, 0.2);
-    width: 103px;
-    height: 103px; }
+    background-size: 5em;
+    background-color: rgba(111, 111, 111, 0.2); }
 
 .pirate-facebook {
-  width: 6em;
-  height: 6em;
-  border: 1px  cdcdb1 solid;
-  background-image: url(../images/facebook_lg_g-02.png);
-  background-repeat: no-repeat;
+  background-image: url(../images/facebook_lg_b-02.png);
+  background-size: 5em;
+  background-position: center;
+  width: 5em;
+  height: 5em;
+  border: 1px dotted #000;
   border-radius: 1000px;
-  background-size: 100%;
-  border: 1px solid #d3d3d3;
-  transition: all .25s; }
+  transition: all .5s; }
   .pirate-facebook:hover {
-    background-color: rgba(111, 111, 111, 0.2);
-    background-image: url(../images/facebook_lg_b-02.png);
-    width: 103px;
-    height: 103px; }
+    background-size: 5em;
+    background-color: rgba(111, 111, 111, 0.2); }
 
 #contact {
   visibility: visible;
@@ -459,7 +458,7 @@ header {
       margin: -5px;
       padding: 10px;
       color: #000;
-      border: 1px solid #d3d3d3;
+      border: 1px dotted #000;
       transition: all .5s; }
       #contact .main-buttons ul li:hover, #contact .main-buttons ul li:focus, #contact .main-buttons ul li:active {
         color: #000;
@@ -511,8 +510,12 @@ header {
     color: white; }
 
 #members input {
-  margin-top: 100px;
-  padding: 1rem 1rem .75rem 1rem; }
+  width: 100%;
+  margin-top: 100px; }
+
+#members h3 {
+  font-weight: 400;
+  border-bottom: dotted #000 1px; }
 
 .background-grey {
   color: #d3d3d3; }

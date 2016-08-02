@@ -1,10 +1,12 @@
 .view-blocks {
     padding-top: 80px;
 }
-
+.date{
+    font-weight: 500;
+}
 #map {
     width: 100%;
-    height: 200px;
+    height: 250px;
 }
 
 #home {
@@ -20,44 +22,41 @@
 .pirate-main-nav {
     display:none;
 }
+#calendar{
+    ul {
+        margin: 0;
+    }
+}
 //===============================================
 // background images for fb & email
 //===============================================
 .pirate-email{
-    width: 6em;
-    height: 6em;
-    border: 1px cdcdb1 solid;
-    background-size: 100px;
-    background-image: url(../images/email_lg_g-01.png);
-    background-repeat: no-repeat;
+    background-image: url(../images/email_lg_b-01.png);
+    width: 5em;
+    height: 5em;
     border-radius: 1000px;
-    background-size: 100%;
-    border: 1px solid #d3d3d3;
-    transition: all .25s;
-
+    background-size: 5em;
+    border: 1px dotted $color-dark;
+    background-position: center;
+    transition: all .5s;
     &:hover{
-        background-image: url(../images/email_lg_b-01.png);
+        background-size: 5em;
         background-color: rgba(111, 111, 111, .2);
-        width: 103px;
-        height: 103px;
     }
 }
 
 .pirate-facebook{
-    width: 6em;
-    height: 6em;
-    border: 1px  cdcdb1 solid;
-    background-image: url(../images/facebook_lg_g-02.png);
-    background-repeat: no-repeat;
+    background-image: url(../images/facebook_lg_b-02.png);
+    background-size: 5em;
+    background-position: center;
+    width: 5em;
+    height: 5em;
+    border: 1px dotted $color-dark;
     border-radius: 1000px;
-    background-size: 100%;
-    border: 1px solid #d3d3d3;
-    transition: all .25s;
+    transition: all .5s;
     &:hover{
+        background-size: 5em;
         background-color: rgba(111, 111, 111, .2);
-        background-image: url(../images/facebook_lg_b-02.png);
-        width: 103px;
-        height: 103px;
     }
 }
 //===============================================
@@ -87,7 +86,7 @@
                 margin: -5px;
                 padding: 10px;
                 color: $color-dark;
-                border: 1px solid #d3d3d3;
+                border: 1px dotted $color-dark;
                 transition: all .5s;
                 &:hover, &:focus, &:active {
                     color: $color-dark;
