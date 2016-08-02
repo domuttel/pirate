@@ -1,3 +1,32 @@
+//LOGIN / LOGOUT / INPUTS
+input{
+    font-weight: 300;
+    font-size: 1.15em;
+    margin-bottom: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px dotted #d3d3d3;
+    width:100%;
+    padding: 10px;
+    color: $color-dark;
+    &[type=button] {
+        width: 30%;
+        margin: 0 auto;
+        background-color: transparent;
+        padding: 10px;
+        color: $color-dark;
+        border: 1px solid #d3d3d3;
+        transition: all .5s;
+        &:hover, &:focus, &:active {
+            color: $color-dark;
+            background-color: rgba(111, 111, 111, .2);
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+    }
+}
+
 //===========================
 // mobile navigation nav
 //===========================
@@ -103,7 +132,7 @@
         text-align: right;
     }
     ul {
-        font-family: $font-p;
+        font-family: 'Athiti';
         font-size: 1em;
         font-weight: 200;
         list-style: none;
@@ -164,7 +193,7 @@
     text-align: right;
     width: 100%;
     margin: -68px  0  0 -14px;
-    font-family: $font-p;
+    font-family: 'Athiti';
     font-size: .9em;
     font-weight: 200;
     a {

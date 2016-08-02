@@ -161,5 +161,7 @@ $(document).on('ready', function() {
             $("#login-form").toggle();
         }
     });
-
+    $("input:text").focus(function() {
+      this.value = "";
+    });
 });// END ONLOAD

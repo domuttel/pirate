@@ -3,17 +3,18 @@
 }
 
 body {
-  @include heavyFont;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  overflow: auto;
-  transition: all 2s;
+    font-family: "Athiti", Courier, monospace;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow: auto;
+    transition: all 2s;
 }
 
 h1 {
-  font-size: 2rem;
-  letter-spacing: .2rem;
+    @include heavyFont;
+    font-size: 2rem;
+    letter-spacing: .2rem;
 }
 
 @media screen and (min-width:768px) {
@@ -29,22 +30,19 @@ h2{
     letter-spacing: .3rem;
 }
 h3{
-    font-family: $font-p;
     font-size: 1.5em;
     font-weight: 200;
 }
 
 p{
-    font-family: $font-p;
     font-size: 1.3em;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.75rem;
     letter-spacing: .25rem;
 }
 ul{
     margin: 0;
     padding: 0;
-    font-family: $font-p;
     font-size: 1em;
     font-weight: 200;
     line-height: 1.5rem;
