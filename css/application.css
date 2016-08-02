@@ -377,6 +377,12 @@ header {
   flex-direction: column;
   justify-content: space-between; }
 
+#pirate-mobile-menu {
+  display: none; }
+
+.pirate-main-nav {
+  display: none; }
+
 .pirate-email {
   width: 6em;
   height: 6em;

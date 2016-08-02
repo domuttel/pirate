@@ -80,6 +80,10 @@ $(document).on('ready', function() {
         e.preventDefault();
         $( "#members" ).children().remove();
         $("#public").toggle();
+        $('#mobile-menu').toggle();
+        $('#pirate-mobile-menu').toggle();
+        $('.main-nav').toggle();
+        $('.pirate-main-nav').toggle();
     });
 
     function removeFirstLast(string){
@@ -108,8 +112,8 @@ $(document).on('ready', function() {
             var phoneTagStart = '<a href="tel:';
             var phoneTagEnd = '">';
             var phoneTagClose = '</a>';
+            var statusHTML = '';
             $.getJSON(url, function (response) {
-                var statusHTML = '';
                 $.each(response, function (index, artist) {
                     if( artist.memberType === "Member") {
                         statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
@@ -118,11 +122,11 @@ $(document).on('ready', function() {
                     }
                 });
                 $('#member-contact').html(statusHTML)
-            });
+            // });
             //##############################
             // EMAIL lists
             //##############################
-            $.getJSON(url, function (response) {
+            // $.getJSON(url, function (response) {
                 var allList = '';
                 var memberList = '';
                 var associateList = '';
@@ -144,6 +148,11 @@ $(document).on('ready', function() {
                     }
                 });
             });
+            // Nav menu change
+            $('.main-nav').toggle();
+            $('.pirate-main-nav').toggle();
+            $('#mobile-menu').toggle();
+            $('#pirate-mobile-menu').toggle();
             $("#contact").toggle();
             $("#login-form").toggle();
         } else {

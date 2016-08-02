@@ -36,7 +36,7 @@
    "firstName": "BUG",
    "lastName": "",
    "email": "bug@bug-art.com",
-   "phone": "303-744-2826 ",
+   "phone": "303-744-2826",
    "phone2": "303-520-6865",
    "memberType": "Member"
   },
@@ -99,7 +99,7 @@
   {
    "firstName": "Louis",
    "lastName": " Recchia",
-   "email": "louisrecchia@gmail.com ",
+   "email": "louisrecchia@gmail.com",
    "phone": "970-532-4287",
    "phone2": "",
    "memberType": "Member"

@@ -14,7 +14,13 @@
     flex-direction: column;
     justify-content: space-between;
 }
-
+// hide members menu
+#pirate-mobile-menu {
+    display: none;
+}
+.pirate-main-nav {
+    display:none;
+}
 //===============================================
 // background images for fb & email
 //===============================================
