@@ -11,6 +11,9 @@
     padding: 0 25px 0 0;
     z-index: $z-bottom;
     transition: all .5s;
+    h1{
+        letter-spacing: -.001rem;
+    }
 }
 .fade-out{
     color: #DADADA;

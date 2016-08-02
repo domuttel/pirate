@@ -11,7 +11,7 @@ body {
 
 h1 {
   font-family: 'heavitas';
-  font-size: 2rem;
+  font-size: 2.1rem;
   letter-spacing: .2rem; }
 
 @media screen and (min-width: 768px) {
@@ -432,7 +432,6 @@ header {
   border-radius: 1000px;
   transition: all .5s; }
   .pirate-facebook:hover {
-    background-size: 5em;
     background-color: rgba(111, 111, 111, 0.2); }
 
 #contact {
@@ -493,6 +492,8 @@ header {
   padding: 0 25px 0 0;
   z-index: -5000;
   transition: all .5s; }
+  .background h1 {
+    letter-spacing: -.001rem; }
 
 .fade-out {
   color: #DADADA; }
@@ -516,6 +517,16 @@ header {
 #members h3 {
   font-weight: 400;
   border-bottom: dotted #000 1px; }
+
+#members a {
+  color: #000;
+  text-decoration: overline;
+  transition: all .25s; }
+  #members a:hover, #members a:focus, #members a:active {
+    text-decoration: none; }
+
+#members .red a {
+  color: red; }
 
 .background-grey {
   color: #d3d3d3; }

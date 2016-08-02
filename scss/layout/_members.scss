@@ -7,8 +7,22 @@
         font-weight: 400;
         border-bottom: dotted $color-dark 1px;
     }
-}
+    a{
+        color: $color-dark;
+        text-decoration: overline;
+        transition: all .25s;
+        &:hover, &:focus, &:active {
+            text-decoration: none;
 
+        }
+    }
+    .red {
+        a{
+
+            color: red;
+        }
+    }
+}
 
 .background-grey {
     color: #d3d3d3;
