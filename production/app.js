@@ -67,7 +67,93 @@ $(document).on('ready', function() {
     //     }
     //     $box.slideDown(500);
     // });
-});
+//---------------------------------------------------
+// AJAX for members / Temp login
+//---------------------------------------------------
+// SHOW MEMBER LOGIN
+    $("#member-login").click( function(){
+        $("#contact").toggle();
+        $("#login-form").toggle();
+    });
+// LOGOUT
+    $( '#members' ).on("click", "input[name='logout-member']", function(e) {
+        e.preventDefault();
+        $( "#members" ).children().remove();
+        $("#public").toggle();
+    });
+
+    function removeFirstLast(string){
+        var firstChar = "";
+        var lastChar = "";
+        lastChar = string.slice(0, -1);
+        firstChar = lastChar.slice(1);
+        return firstChar;
+    };
+
+// LOGIN
+    $("input:button[name='submit']").click(function(e){
+        e.preventDefault();
+        var name = $("input:text[name='name']").val();
+        var pass = $("input:text[name='password']").val();
+        if( name === "pirate" && pass === "16") {
+            $(".background").addClass('background-grey');
+            $("#public").toggle();
+            // ADD MEMBERS
+            $("#members").load("../data/member.html");
+            // ADD EMAIL LIST
+            var mailTagStart = '<a href="mailto:info@pirateartonline.org?cc=';
+            var mailTagDirrectStart = '<a href="mailto:'
+            var mailTagEnd = '">';
+            var mailTagClose = '</a>';
+            var phoneTagStart = '<a href="tel:';
+            var phoneTagEnd = '">';
+            var phoneTagClose = '</a>';
+            $.getJSON(url, function (response) {
+                var statusHTML = '';
+                $.each(response, function (index, artist) {
+                    if( artist.memberType === "Member") {
+                        statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
+                    } else {
+                        statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
+                    }
+                });
+                $('#member-contact').html(statusHTML)
+            });
+            //##############################
+            // EMAIL lists
+            //##############################
+            $.getJSON(url, function (response) {
+                var allList = '';
+                var memberList = '';
+                var associateList = '';
+                $.each(response, function (index, artist) {
+                    allList += artist.email + ',';
+                });
+                removeFirstLast(allList);
+                $("#email-all").html(mailTagStart + allList + '">Email ALL Pirates</a>');
+
+                $.each(response, function (index, artist) {
+                    if (artist.memberType === "Member") {
+                        memberList += artist.email + ',';
+                        removeFirstLast(memberList);
+                        $('#email-members').html(mailTagStart + memberList + '">Email Members</a>')
+                    } else {
+                        associateList += artist.email + ',';
+                        removeFirstLast(associateList);
+                        $('#email-associates').html(mailTagStart + associateList + '">Email Associates</a>');
+                    }
+                });
+            });
+            $("#contact").toggle();
+            $("#login-form").toggle();
+        } else {
+            alert("Incorrect Password");
+            $("#contact").toggle();
+            $("#login-form").toggle();
+        }
+    });
+
+});// END ONLOAD
 
 
 function initMap() {
@@ -122,7 +208,6 @@ function initMap() {
               { "lightness": -100 }
           ]
       },{
-      },{
           "featureType": "poi",
           "elementType": "geometry",
           "stylers": [
@@ -135,7 +220,6 @@ function initMap() {
           "stylers": [
               { "visibility": "off" }
           ]
-      },{
       }
   ];
 var myLatLng = {lat:39.76787109999999, lng: -105.00435830000004};

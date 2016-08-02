@@ -82,16 +82,15 @@ $(document).on('ready', function() {
         $("#public").toggle();
     });
 
+    function removeFirstLast(string){
+        var firstChar = "";
+        var lastChar = "";
+        lastChar = string.slice(0, -1);
+        firstChar = lastChar.slice(1);
+        return firstChar;
+    };
+
 // LOGIN
-// removeLast += allList.slice(0, -1);
-// removeFirst += removeLast.slice(1);
-function removeFirstLast(string){
-    var firstChar = "";
-    var lastChar = "";
-    lastChar = string.slice(0, -1);
-    firstChar = lastChar.slice(1);
-    return firstChar;
-};
     $("input:button[name='submit']").click(function(e){
         e.preventDefault();
         var name = $("input:text[name='name']").val();
@@ -121,7 +120,7 @@ function removeFirstLast(string){
                 $('#member-contact').html(statusHTML)
             });
             //##############################
-            // EMAIL ALL Link
+            // EMAIL lists
             //##############################
             $.getJSON(url, function (response) {
                 var allList = '';
@@ -130,9 +129,9 @@ function removeFirstLast(string){
                 $.each(response, function (index, artist) {
                     allList += artist.email + ',';
                 });
-
                 removeFirstLast(allList);
                 $("#email-all").html(mailTagStart + allList + '">Email ALL Pirates</a>');
+
                 $.each(response, function (index, artist) {
                     if (artist.memberType === "Member") {
                         memberList += artist.email + ',';
@@ -144,10 +143,7 @@ function removeFirstLast(string){
                         $('#email-associates').html(mailTagStart + associateList + '">Email Associates</a>');
                     }
                 });
-
-
             });
-            // console.log(email);
             $("#contact").toggle();
             $("#login-form").toggle();
         } else {

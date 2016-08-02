@@ -1,0 +1,252 @@
+[
+{"firstName": "<span class='member-type'>Members</span>", "lastName": "", "email": "", "phone": "", "phone2": ""},
+  {
+   "firstName": "Nicole",
+   "lastName": "  Banowetz",
+   "email": "n.a.banowetz@gmail.com",
+    "phone": "",
+    "phone2": "",
+    "memberType": "Member"
+  },
+  {
+   "firstName": "Justin",
+   "lastName": " Beard",
+   "email": "jbeard@hotmail.com",
+   "phone": "303-408-1468",
+   "phone2": "",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "Phil",
+   "lastName": " Bender",
+   "email": "",
+   "phone": "303-909-5748",
+   "phone2": "",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "Michael",
+   "lastName": " Brohman",
+   "email": "mbrohman43@gmail.com",
+   "phone": "303-433-7833",
+   "phone2": "",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "BUG",
+   "lastName": "",
+   "email": "bug@bug-art.com",
+   "phone": "303-744-2826 ",
+   "phone2": "303-520-6865",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "Rebecca",
+   "lastName": " Cuming",
+   "email": " rcumingstudio@comcast.net",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "Robert",
+   "lastName": " Green",
+   "email": "davisgreen.robert@gmail.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "Shannon",
+   "lastName": " Kelly",
+   "email": "shannon@shannonwkelly.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "Charles",
+   "lastName": " Livingston",
+   "email": "admin@charleslivingstonstudio.com",
+   "phone": "720-354-7249",
+   "phone2": "",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "Korri",
+   "lastName": " Marshall",
+   "email": "korri0207@aol.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "Tsogo",
+   "lastName": " Mijid",
+   "email": "tsogo_baja@yahoo.com",
+   "phone": "303-338-8344",
+   "phone2": "",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "Laura Phelps",
+   "lastName": " Rogers",
+   "email": "lauraphelpsrogers@hotmail.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "Louis",
+   "lastName": " Recchia",
+   "email": "louisrecchia@gmail.com ",
+   "phone": "970-532-4287",
+   "phone2": "",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "Craig",
+   "lastName": " Robb",
+   "email": "craiger3d@gmail.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Member"
+  },
+  {
+   "firstName": "Debra",
+   "lastName": " Sanders",
+   "email": "dbrae@msn.com",
+   "phone": "303-940-3542",
+   "phone2": "",
+   "memberType": "Member"
+  },
+{"firstName": "<span class='member-type'>Associates</span>", "lastName": "", "email": "", "phone": "", "phone2": ""},
+  {
+   "firstName": "Eric",
+   "lastName": " Anderson",
+   "email": "ericanderson602@gmail.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Walter",
+   "lastName": " Barton",
+   "email": "12barton@gmail.com",
+   "phone": "303-321-0734",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Brian",
+   "lastName": " Cavanaugh",
+   "email": "brianleecavanaugh@yahoo.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Chrissy",
+   "lastName": " Espinoza",
+   "email": "chrissymode@gmail.com",
+   "phone": "719-320-0376",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Dylan",
+   "lastName": " Gebbia-Richards",
+   "email": "dylan.gebbiarichards@colorado.edu",
+   "phone": "203-362-9164",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Judith",
+   "lastName": " Grey",
+   "email": "heyjudekiwi@gmail.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Heather",
+   "lastName": " Kegal",
+   "email": "coloradoheatherk@q.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Lisa",
+   "lastName": " Kerns",
+   "email": "lisa@lisamkerns-fineart.com",
+   "phone": "303-807-3231",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Maeve",
+   "lastName": " Leslie",
+   "email": "mleslie279@gmail.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Chip",
+   "lastName": " Lynch",
+   "email": "chiplynch@mac.com",
+   "phone": "303-875-4428",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "William",
+   "lastName": " Manke",
+   "email": "supermagicland@gmail.com",
+   "phone": "303-281-3751",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Lucas",
+   "lastName": " McMahon",
+   "email": "lucas.mcmahon@live.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Dominic",
+   "lastName": " Muttel",
+   "email": "dominic.muttel@gmail.com",
+   "phone": "970-420-6721",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Kat",
+   "lastName": " Nechleba",
+   "email": "knechleba@gmail.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Alicia",
+   "lastName": " Ordal",
+   "email": "aliciaisordal@gmail.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Noah",
+   "lastName": " Sodano",
+   "email": "mosesgoat@mac.com",
+   "phone": "",
+   "phone2": "",
+   "memberType": "Associate"
+  }
+]

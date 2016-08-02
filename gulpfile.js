@@ -75,7 +75,7 @@ gulp.task('clean', function(){
 // build production dirrectory
 //=======================================
 gulp.task("build", ['minifyScripts', 'compileSass'], function(){
-    return gulp.src(["css/application.css", "production/app.min.js", "index.html", "images/**", "fonts/**"], { base: "./" })
+    return gulp.src(["css/application.css", "production/app.min.js", "index.html", "images/**", "data/**", "fonts/**"], { base: "./" })
     .pipe(gulp.dest('dist'))
 });
 
