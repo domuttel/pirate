@@ -102,13 +102,20 @@ function removeFirstLast(string){
             // ADD MEMBERS
             $("#members").load("../data/member.html");
             // ADD EMAIL LIST
+            var mailTagStart = '<a href="mailto:info@pirateartonline.org?cc=';
+            var mailTagDirrectStart = '<a href="mailto:'
+            var mailTagEnd = '">';
+            var mailTagClose = '</a>';
+            var phoneTagStart = '<a href="tel:';
+            var phoneTagEnd = '">';
+            var phoneTagClose = '</a>';
             $.getJSON(url, function (response) {
                 var statusHTML = '';
                 $.each(response, function (index, artist) {
                     if( artist.memberType === "Member") {
-                        statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + artist.email + '<br>' + artist.phone + '</p>';
+                        statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
                     } else {
-                        statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + artist.email + '<br>' + artist.phone + '</p>';
+                        statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
                     }
                 });
                 $('#member-contact').html(statusHTML)
@@ -116,20 +123,31 @@ function removeFirstLast(string){
             //##############################
             // EMAIL ALL Link
             //##############################
-            var email = '<a href="mailto:info@pirateartonline.org?cc=';
             $.getJSON(url, function (response) {
                 var allList = '';
-                var removeLast = '';
-                var removeFirst = '';
+                var memberList = '';
+                var associateList = '';
                 $.each(response, function (index, artist) {
                     allList += artist.email + ',';
                 });
-                removeLast += allList.slice(0, -1);
-                removeFirst += removeLast.slice(1);
-                $("#email-all").html(email + removeFirst + '">Email ALL Pirates</a>');
+
+                removeFirstLast(allList);
+                $("#email-all").html(mailTagStart + allList + '">Email ALL Pirates</a>');
+                $.each(response, function (index, artist) {
+                    if (artist.memberType === "Member") {
+                        memberList += artist.email + ',';
+                        removeFirstLast(memberList);
+                        $('#email-members').html(mailTagStart + memberList + '">Email Members</a>')
+                    } else {
+                        associateList += artist.email + ',';
+                        removeFirstLast(associateList);
+                        $('#email-associates').html(mailTagStart + associateList + '">Email Associates</a>');
+                    }
+                });
 
 
             });
+            // console.log(email);
             $("#contact").toggle();
             $("#login-form").toggle();
         } else {
