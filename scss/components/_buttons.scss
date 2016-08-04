@@ -176,14 +176,14 @@ input{
 //---------------------------------------------------
 // do not display on mobile
 //---------------------------------------------------
-@media screen and (min-width: $mobile-styles) {
-    .button_container {
-        display: $dont-show;
-    }
-    .overlay {
-        display: $dont-show;
-    }
-}
+// @media screen and (min-width: $mobile-styles) {
+//     .button_container {
+//         display: $dont-show;
+//     }
+//     .overlay {
+//         display: $dont-show;
+//     }
+// }
 
 //===========================
 // desktop navigation nav
@@ -211,19 +211,6 @@ input{
     }
 }
 
-@media screen and (max-width: 768px) {
-  .desktop-nav{
-  display: none;
-
-  }
-}
-// @media screen and (min-width:768px) {
-//   .desktop-nav{
-//
-//   opacity: 1;
-//   transition-delay: 0;
-//   }
-// }
 /* Chrome, Safari, Opera */
 @-webkit-keyframes ham-menu-visual {
     0%   {opacity: 1.0;}

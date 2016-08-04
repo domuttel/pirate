@@ -1,0 +1,48 @@
+@media (#{$bp-larger-than-mobile}) {
+}
+
+@media (#{$bp-larger-than-tablet}) {
+    h1 {
+        font-size: 4rem;
+        letter-spacing: .3rem;
+    }
+    h2{
+        font-size: 2rem;
+        // letter-spacing: .5rem;
+    }
+    h3{
+        font-size: 1.75em;
+        font-weight: 200;
+        transition: all .1s;
+
+    }
+    p{
+        font-size: 1.6em;
+        font-weight: 300;
+        line-height: 2.5rem;
+        transition: all .1s;
+    }
+    ul{
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 2rem;
+        letter-spacing: 0rem;
+        list-style-type: none;
+    }
+    .view-blocks {
+        padding-top: 110px;
+    }
+    .button_container {
+        display: $dont-show;
+    }
+    .overlay {
+        display: $dont-show;
+    }
+
+}
+@media screen and (max-width: 768px) {
+  .desktop-nav{
+  display: $dont-show;
+
+  }
+}

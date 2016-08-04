@@ -15,23 +15,21 @@ h1 {
     @include heavyFont;
     font-size: 2.1rem;
     letter-spacing: .2rem;
-}
-
-@media screen and (min-width:768px) {
-  h1 {
-    font-size: 4rem;
-    letter-spacing: .3rem;
-  }
+    transition: font-size .5s, letter-spacing .5s;
 }
 
 h2{
     @include heavyFont;
     font-size: 1.5rem;
     letter-spacing: .3rem;
+    transition: all .1s;
+
 }
 h3{
     font-size: 1.5em;
     font-weight: 200;
+    transition: all .1s;
+
 }
 
 p{
@@ -39,6 +37,8 @@ p{
     font-weight: 400;
     line-height: 1.75rem;
     letter-spacing: .25rem;
+    transition: all .1s;
+
 }
 ul{
     margin: 0;

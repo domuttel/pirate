@@ -8,7 +8,9 @@
     width: 100%;
     height: 250px;
 }
-
+#artist-tab{
+    margin-top: -200px;
+}
 #home {
     height:100vh;
     display: flex;
@@ -109,14 +111,17 @@
 //=================================================
 // styles for artist profiles
 //=================================================
-
-.artist-profile{
-    left: 0;
-    margin-top: -2.5rem;
-    width: 100%;
-    height: auto;
-    margin-left: 0;
-    span{
-        font-weight: 700;
+#artists{
+    h2{
+        margin-bottom: 3rem;
+    }
+    .artist-profile{
+        left: 0;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        h3{
+            margin-top: -2rem;
+        }
     }
 }

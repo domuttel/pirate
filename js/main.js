@@ -49,21 +49,21 @@ $(document).on('ready', function() {
     $.getJSON(url, function (response) {
         var associates = '<h3>ASSOCIATES</h3>';
         var members = '<h3>MEMBERS</h3>';
-        var statusHTML = '';
-        $.each(response, function (index, artist) {
-        if( artist.memberType === "Member") {
-            statusHTML += '<div class="artist-profile columns seven">';
-            statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
-            statusHTML += '</div>';
-        } else {
-            statusHTML += '<div class="artist-profile columns seven">';
-            statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
-            statusHTML += '</div>';
-        }
-                });
+        var statusHTML = '<h2>ARTISTS</h2><div class="artist-profile columns seven">';
         // $.each(response, function (index, artist) {
+        // if( artist.memberType === "Member") {
+        //     // statusHTML += '<div class="artist-profile columns seven">';
         //     statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
-        // });
+        //     statusHTML += '</div>';
+        // } else {
+        //     // statusHTML += '<div class="artist-profile columns seven">';
+        //     statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
+        //     statusHTML += '</div>';
+        // }
+        //         });
+        $.each(response, function (index, artist) {
+            statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
+        });
         $('#artists').html(statusHTML)
     });
 //********* click on artist to expand *********//
