@@ -1,10 +1,11 @@
 header{
     z-index: 5000;
     position: fixed;
-    top: 0;
+    top: -10px;
     width: 100%;
     text-align: right;
     h1{
+        font-family: 'heavitasregular', "Arial Black", Gadget, sans-serif;
         margin-top: -5px;
         padding: 27px 2px 15px 0;
         width: 100%;
