@@ -1,5 +1,5 @@
 $(document).on('ready', function() {
-    // $('h1').css("color", "red");
+    // $('h1').css("font-family", 'heavitasregular');
 //---------------------------------------------------
 // mobile nav logic
 //---------------------------------------------------
@@ -115,52 +115,53 @@ $(document).on('ready', function() {
             $(".background").addClass('background-grey');
             $("#public").toggle();
             // ADD MEMBERS
-            $("#members").load("../data/member.html");
-            // ADD EMAIL LIST
-            var mailTagStart = '<a href="mailto:info@pirateartonline.org?cc=';
-            var mailTagDirrectStart = '<a href="mailto:'
-            var mailTagEnd = '">';
-            var mailTagClose = '</a>';
-            var phoneTagStart = '<a href="tel:';
-            var phoneTagEnd = '">';
-            var phoneTagClose = '</a>';
-            var statusHTML = '';
+            $("#members").load("../data/member.html", function(){
+                var mailTagStart = '<a href="mailto:info@pirateartonline.org?cc=';
+                var mailTagDirrectStart = '<a href="mailto:'
+                var mailTagEnd = '">';
+                var mailTagClose = '</a>';
+                var phoneTagStart = '<a href="tel:';
+                var phoneTagEnd = '">';
+                var phoneTagClose = '</a>';
+                var statusHTML = '';
 
-            $.getJSON(url, function (response) {
-                $.each(response, function (index, artist) {
-                    if( artist.memberType === "Member") {
-                        statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
-                    } else {
-                        statusHTML +=  '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
-                    }
+                $.getJSON(url, function (response) {
+                    $.each(response, function (index, artist) {
+                        if( artist.memberType === "Member") {
+                            statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
+                        } else {
+                            statusHTML +=  '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
+                        }
+                    });
+                    $('#member-contact').html(statusHTML)
+                // });
+                // $.getJSON(url, function (response) {
+                    var allList = '';
+                    var memberList = '';
+                    var associateList = '';
+                    $.each(response, function (index, artist) {
+                        allList += artist.email + ',';
+                    });
+                    removeFirstLast(allList);
+                    $("#email-all").html(mailTagStart + allList + '">Email ALL Pirates</a>');
+
+                    $.each(response, function (index, artist) {
+                        if (artist.memberType === "Member") {
+                            memberList += artist.email + ',';
+                            removeFirstLast(memberList);
+                            $('#email-members').html(mailTagStart + memberList + '">Email Members</a>')
+                        } else {
+                            associateList += artist.email + ',';
+                            removeFirstLast(associateList);
+                            $('#email-associates').html(mailTagStart + associateList + '">Email Associates</a>');
+                        }
+                    });
                 });
-                $('#member-contact').html(statusHTML)
             });
+            // ADD EMAIL LIST
             //##############################
             // EMAIL lists
             //##############################
-            $.getJSON(url, function (response) {
-                var allList = '';
-                var memberList = '';
-                var associateList = '';
-                $.each(response, function (index, artist) {
-                    allList += artist.email + ',';
-                });
-                removeFirstLast(allList);
-                $("#email-all").html(mailTagStart + allList + '">Email ALL Pirates</a>');
-
-                $.each(response, function (index, artist) {
-                    if (artist.memberType === "Member") {
-                        memberList += artist.email + ',';
-                        removeFirstLast(memberList);
-                        $('#email-members').html(mailTagStart + memberList + '">Email Members</a>')
-                    } else {
-                        associateList += artist.email + ',';
-                        removeFirstLast(associateList);
-                        $('#email-associates').html(mailTagStart + associateList + '">Email Associates</a>');
-                    }
-                });
-            });
             // Nav menu change
             $('.main-nav').toggle();
             $('.pirate-main-nav').toggle();
