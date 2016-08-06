@@ -134,8 +134,8 @@ $(document).on('ready', function() {
                         }
                     });
                     $('#member-contact').html(statusHTML)
-                // });
-                // $.getJSON(url, function (response) {
+                });
+                $.getJSON(url, function (response) {
                     var allList = '';
                     var memberList = '';
                     var associateList = '';
