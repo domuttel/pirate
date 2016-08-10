@@ -286,7 +286,7 @@ input {
   .overlay ul {
     font-family: 'Athiti';
     font-size: 1em;
-    font-weight: 200;
+    font-weight: 400;
     list-style: none;
     padding: 0;
     margin: 0 auto;
@@ -321,7 +321,7 @@ input {
   margin: -68px  0  0 -14px;
   font-family: 'Athiti';
   font-size: .9em;
-  font-weight: 200; }
+  font-weight: 400; }
   .desktop-nav a {
     color: #FFF;
     text-decoration: none;
@@ -512,23 +512,27 @@ header {
     font-size: .25rem;
     color: white; }
 
-#members input {
-  width: 100%;
-  margin-top: 100px; }
+#members {
+  overflow-y: hidden; }
+  #members input {
+    width: 100%;
+    margin-top: 100px; }
+  #members h3 {
+    font-weight: 400;
+    border-bottom: dotted #000 1px; }
+  #members a {
+    color: #000;
+    text-decoration: overline;
+    transition: all .25s; }
+    #members a:hover, #members a:focus, #members a:active {
+      text-decoration: none; }
+  #members .red a {
+    color: red; }
 
-#members h3 {
-  font-weight: 400;
-  border-bottom: dotted #000 1px; }
-
-#members a {
-  color: #000;
-  text-decoration: overline;
-  transition: all .25s; }
-  #members a:hover, #members a:focus, #members a:active {
-    text-decoration: none; }
-
-#members .red a {
-  color: red; }
+#member-contact p {
+  text-overflow: ellipsis; }
+  #member-contact p a {
+    word-wrap: break-word; }
 
 .background-grey {
   color: #d3d3d3; }

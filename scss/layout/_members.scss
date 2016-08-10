@@ -1,4 +1,5 @@
 #members{
+    overflow-y: hidden;
     input{
         width: 100%;
         margin-top: 100px;
@@ -23,7 +24,13 @@
         }
     }
 }
-
+#member-contact{
+    p{
+        text-overflow: ellipsis;
+        a{ word-wrap: break-word;
+        }
+    }
+}
 .background-grey {
     color: #d3d3d3;
 }
