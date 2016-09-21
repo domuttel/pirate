@@ -1,5 +1,15 @@
+function removeFirstLast(string){
+    var firstChar = "";
+    var lastChar = "";
+    lastChar = string.slice(0, -1);
+    firstChar = lastChar.slice(1);
+    return firstChar;
+};
 $(document).on('ready', function() {
-    // $('h1').css("font-family", 'heavitasregular');
+
+    $("input:button[name='juried']").click( function () {
+        window.location = 'https://www.callforentry.org/festivals_unique_info.php?ID=3757' + this.id;
+    });
 //---------------------------------------------------
 // mobile nav logic
 //---------------------------------------------------
@@ -11,26 +21,21 @@ $(document).on('ready', function() {
             $('#toggle').toggleClass('active');
             $('#overlay').toggleClass('open');
     });
-
 //---------------------------------------------------
 // scroll to div logic options
 //---------------------------------------------------
     $('a[href^="#"]').on('click', function(event) {
-
       var target = $(this.getAttribute('href'));
-
       if( target.length ) {
         event.preventDefault();
             $('html, body').stop().animate({
                 scrollTop: target.offset().top
             }, 1000);
         }
-
     });
 //---------------------------------------------------
 // background fade on scroll
 //---------------------------------------------------
-
     $(document).scroll(function () {
         var y = $(this).scrollTop();
         if (y > 50) {
@@ -40,11 +45,9 @@ $(document).on('ready', function() {
             $('.background').removeClass("fade-out");
         }
     });
-
 //---------------------------------------------------
 // AJAX for artist data
 //---------------------------------------------------
-
     var url = "../data/artists.json";
     $.getJSON(url, function (response) {
         var associates = '<h3>ASSOCIATES</h3>';
@@ -64,7 +67,7 @@ $(document).on('ready', function() {
         $.each(response, function (index, artist) {
             statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
         });
-        $('#artists').html(statusHTML)
+        $('#artists').html(statusHTML);
     });
 //********* click on artist to expand *********//
     // $(".artist-name").click(function() {
@@ -97,15 +100,6 @@ $(document).on('ready', function() {
         $('.main-nav').toggle();
         $('.pirate-main-nav').toggle();
     });
-
-    function removeFirstLast(string){
-        var firstChar = "";
-        var lastChar = "";
-        lastChar = string.slice(0, -1);
-        firstChar = lastChar.slice(1);
-        return firstChar;
-    };
-
 // LOGIN
     $("input:button[name='submit']").click(function(e){
         e.preventDefault();
@@ -124,7 +118,6 @@ $(document).on('ready', function() {
                 var phoneTagEnd = '">';
                 var phoneTagClose = '</a>';
                 var statusHTML = '';
-
                 $.getJSON(url, function (response) {
                     $.each(response, function (index, artist) {
                         if( artist.memberType === "Member") {
@@ -144,7 +137,6 @@ $(document).on('ready', function() {
                     });
                     removeFirstLast(allList);
                     $("#email-all").html(mailTagStart + allList + '">Email ALL Pirates</a>');
-
                     $.each(response, function (index, artist) {
                         if (artist.memberType === "Member") {
                             memberList += artist.email + ',';

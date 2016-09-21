@@ -8,6 +8,18 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create();
 
+// auto prefix vendors
+var AUTOPREFIXER_BROWSERS = [
+    'ie >= 10',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
+];
 //=======================================
 // concat all .js
 // js/main.js -> production/app.js
@@ -25,7 +37,7 @@ gulp.task('concatScripts', function(){
 // minify all .js
 // production/app.js -> to production/app.min.js
 //=======================================
-gulp.task('minifyScripts', ["concatScripts"], function(){
+gulp.task('minifyScripts', ['concatScripts'], function(){
   return gulp.src('production/app.js')
   // minifies code
   .pipe(uglify())
@@ -41,9 +53,9 @@ gulp.task('minifyScripts', ["concatScripts"], function(){
 gulp.task('compileSass', function(){
     return gulp.src('scss/**/*.scss')
     .pipe(maps.init())
-    .pipe(sass()) // Using gulp-sass
+    .pipe(sass())
+	.pipe(autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
     .pipe(maps.write('../maps')) // source map for debugging
-    // .pipe(autoprefixer('last 2 versions')) // auto-prefix css
     .pipe(gulp.dest('css'))
     .pipe(browserSync.stream())
 });
@@ -59,8 +71,8 @@ gulp.task('watchFiles', function(){
 
     gulp.watch('scss/**/*.scss', ['compileSass']);
     gulp.watch('production/app.js', ['concatScripts'], browserSync.reload);
-    gulp.watch("*.html").on('change', browserSync.reload);
-    gulp.watch("js/*.js").on('change', browserSync.reload);
+    gulp.watch('*.html').on('change', browserSync.reload);
+    gulp.watch('js/*.js').on('change', browserSync.reload);
 
 });
 
@@ -74,11 +86,12 @@ gulp.task('clean', function(){
 //=======================================
 // build production dirrectory
 //=======================================
-gulp.task("build", ['minifyScripts', 'compileSass'], function(){
-    return gulp.src(["css/application.css", "production/app.min.js", "index.html", "images/**", "data/**", "fonts/**"], { base: "./" })
+gulp.task('build', ['minifyScripts', 'compileSass'], function(){
+    return gulp.src(['css/application.css', 'production/app.min.js', 'index.html', 'images/**', 'data/**', 'fonts/**'], { base: './' })
     .pipe(gulp.dest('dist'))
 });
 
+gulp.task('checkjs', ['jshint']);
 
 gulp.task('serve', ['watchFiles']);
 

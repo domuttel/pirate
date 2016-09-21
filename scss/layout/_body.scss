@@ -13,9 +13,12 @@
 }
 #home {
     height:100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    input{
+        width: auto;
+    }
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
 }
 // hide members menu
 #pirate-mobile-menu {
