@@ -11,11 +11,14 @@
 #artist-tab{
     margin-top: -200px;
 }
-#home {
-    height:100vh;
+#upcoming{
+
     input{
         width: auto;
     }
+}
+#home {
+    height:100vh;
     // display: flex;
     // flex-direction: column;
     // justify-content: space-between;
@@ -126,5 +129,12 @@
         h3{
             margin-top: -2rem;
         }
+    }
+}
+.join-pirate{
+    text-align: center;
+    margin-bottom: 2rem;
+    input{
+        width: auto;
     }
 }

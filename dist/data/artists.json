@@ -4,7 +4,7 @@
    "firstName": "Nicole",
    "lastName": "  Banowetz",
    "email": "n.a.banowetz@gmail.com",
-    "phone": "",
+    "phone": "303-507-4260",
     "phone2": "",
     "memberType": "Member"
   },
@@ -19,16 +19,8 @@
   {
    "firstName": "Phil",
    "lastName": " Bender",
-   "email": "",
+   "email": "philbender47@gmail.com",
    "phone": "303-909-5748",
-   "phone2": "",
-   "memberType": "Member"
-  },
-  {
-   "firstName": "Michael",
-   "lastName": " Brohman",
-   "email": "mbrohman43@gmail.com",
-   "phone": "303-433-7833",
    "phone2": "",
    "memberType": "Member"
   },
@@ -52,7 +44,7 @@
    "firstName": "Robert",
    "lastName": " Green",
    "email": "davisgreen.robert@gmail.com",
-   "phone": "",
+   "phone": "970-203-9050",
    "phone2": "",
    "memberType": "Member"
   },
@@ -60,7 +52,7 @@
    "firstName": "Shannon",
    "lastName": " Kelly",
    "email": "shannon@shannonwkelly.com",
-   "phone": "",
+   "phone": "720-319-4645",
    "phone2": "",
    "memberType": "Member"
   },
@@ -89,6 +81,14 @@
    "memberType": "Member"
   },
   {
+      "firstName": "Louis",
+      "lastName": " Recchia",
+      "email": "louisrecchia@gmail.com",
+      "phone": "970-532-4287",
+      "phone2": "",
+      "memberType": "Member"
+  },
+  {
    "firstName": "Laura Phelps",
    "lastName": " Rogers",
    "email": "lauraphelpsrogers@hotmail.com",
@@ -97,18 +97,10 @@
    "memberType": "Member"
   },
   {
-   "firstName": "Louis",
-   "lastName": " Recchia",
-   "email": "louisrecchia@gmail.com",
-   "phone": "970-532-4287",
-   "phone2": "",
-   "memberType": "Member"
-  },
-  {
    "firstName": "Craig",
    "lastName": " Robb",
    "email": "craiger3d@gmail.com",
-   "phone": "",
+   "phone": "720-620-8608",
    "phone2": "",
    "memberType": "Member"
   },
@@ -134,6 +126,14 @@
    "lastName": " Barton",
    "email": "12barton@gmail.com",
    "phone": "303-321-0734",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
+   "firstName": "Kelly",
+   "lastName": " Brewer",
+   "email": "kbrewe2@gmail.com",
+   "phone": "720-448-2243",
    "phone2": "",
    "memberType": "Associate"
   },
@@ -170,6 +170,14 @@
    "memberType": "Associate"
   },
   {
+   "firstName": "Mango",
+   "lastName": " Katz",
+   "email": "rawbeaglemeat@gmail.com",
+   "phone": "720-370-4125",
+   "phone2": "",
+   "memberType": "Associate"
+  },
+  {
    "firstName": "Heather",
    "lastName": " Kegel",
    "email": "coloradoheatherk@q.com",
@@ -189,7 +197,7 @@
    "firstName": "Maeve",
    "lastName": " Leslie",
    "email": "mleslie279@gmail.com",
-   "phone": "",
+   "phone": "808-224-1034",
    "phone2": "",
    "memberType": "Associate"
   },

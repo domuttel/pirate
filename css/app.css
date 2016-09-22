@@ -213,6 +213,11 @@ h3 {
   font-weight: 200;
   transition: all .1s; }
 
+h4 {
+  font-size: 1.3em;
+  font-weight: 700;
+  transition: all .1s; }
+
 p {
   font-size: 1.3em;
   font-weight: 400;
@@ -610,10 +615,11 @@ header {
 #artist-tab {
   margin-top: -200px; }
 
+#upcoming input {
+  width: auto; }
+
 #home {
   height: 100vh; }
-  #home input {
-    width: auto; }
 
 #pirate-mobile-menu {
   display: none; }
@@ -719,6 +725,12 @@ header {
   margin-left: 0; }
   #artists .artist-profile h3 {
     margin-top: -2rem; }
+
+.join-pirate {
+  text-align: center;
+  margin-bottom: 2rem; }
+  .join-pirate input {
+    width: auto; }
 
 .background {
   color: black;

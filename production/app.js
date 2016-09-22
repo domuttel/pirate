@@ -7,8 +7,21 @@ function removeFirstLast(string){
 };
 $(document).on('ready', function() {
 
-    $("input:button[name='juried']").click( function () {
+    $("input:button[name='juried']").click( function (e) {
+        e.preventDefault();
         window.location = 'https://www.callforentry.org/festivals_unique_info.php?ID=3757' + this.id;
+    });
+    var dodPdf = "../images/dod-press.pdf";
+    var applyPdf = "../images/pirate_application_2016.pdf";
+    $("input:button[name='v-application']").click( function (e) {
+        e.preventDefault();
+        window.open(applyPdf,'_blank');
+        return false;
+    });
+    $("input:button[name='dod']").click( function (e) {
+        e.preventDefault();
+        window.open(dodPdf,'_blank');
+        return false;
     });
 //---------------------------------------------------
 // mobile nav logic
