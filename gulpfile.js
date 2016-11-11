@@ -25,7 +25,7 @@ var AUTOPREFIXER_BROWSERS = [
 // js/main.js -> production/app.js
 //=======================================
 gulp.task('concatScripts', function(){
-  return gulp.src(['js/main.js', 'js/map.js']) // <- add other js files in array
+  return gulp.src(['js/main.js']) // <- add other js files in array
   //concats files to one file
   .pipe(maps.init())
   .pipe(concat('app.js'))
@@ -87,14 +87,13 @@ gulp.task('clean', function(){
 // build production dirrectory
 //=======================================
 gulp.task('build', ['minifyScripts', 'compileSass'], function(){
-    return gulp.src(['css/application.css', 'production/app.min.js', 'index.html', 'images/**', 'data/**', 'fonts/**'], { base: './' })
+    return gulp.src(['css/app.css', 'production/app.min.js', 'index.html', 'images/**', 'data/**', 'fonts/**'], { base: './' })
     .pipe(gulp.dest('dist'))
 });
 
 gulp.task('checkjs', ['jshint']);
 
 gulp.task('serve', ['watchFiles']);
-
 
 // default task!
 gulp.task('default', ['clean'], function(){

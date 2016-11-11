@@ -59,42 +59,48 @@ $(document).on('ready', function() {
         }
     });
 //---------------------------------------------------
-// AJAX for artist data
+// PUBLIC - List of Artists
 //---------------------------------------------------
     var url = "../data/artists.json";
     $.getJSON(url, function (response) {
-        var associates = '<h3>ASSOCIATES</h3>';
-        var members = '<h3>MEMBERS</h3>';
-        var statusHTML = '<h2>ARTISTS</h2><div class="artist-profile columns seven">';
-        // $.each(response, function (index, artist) {
-        // if( artist.memberType === "Member") {
-        //     // statusHTML += '<div class="artist-profile columns seven">';
-        //     statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
-        //     statusHTML += '</div>';
-        // } else {
-        //     // statusHTML += '<div class="artist-profile columns seven">';
-        //     statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
-        //     statusHTML += '</div>';
-        // }
-        //         });
+        var memberStatus = '<h2>ARTISTS</h2><h3><b>MEMBERS</b></h3>';
+        var associateStatus = '<h3><b>ASSOCIATES</b></h3>';
         $.each(response, function (index, artist) {
-            statusHTML += '<h3>' + artist.firstName + artist.lastName + '</h3>';
+            if( artist.memberType === "Member") {
+                if (artist.group === true){
+                    memberStatus += '<div class="artist-profile columns seven">';
+                    memberStatus += '<h3>' + artist.firstName1 + ' ' + artist.lastName1 + ' / ' + artist.firstName2 + " " + artist.lastName2 + '</h3>';
+                } else {
+                    memberStatus += '<div class="artist-profile columns seven">';
+                    memberStatus += '<h3>' + artist.firstName1 + ' ' + artist.lastName1 + '</h3>';
+                }
+            } else {
+                if(artist.group === true){
+                    associateStatus += '<div class="artist-profile columns seven">';
+                    associateStatus += '<h3>' + artist.groupName + ': ';
+                    associateStatus += artist.firstName1 + ' ' + artist.lastName1 + ' / ' + artist.firstName2 + " " + artist.lastName2 + '</h3>';
+                } else {
+                    associateStatus += '<div class="artist-profile columns seven">';
+                    associateStatus += '<h3>' + artist.firstName1 + ' ' + artist.lastName1 + '</h3>';
+                }
+            }
         });
-        $('#artists').html(statusHTML);
+        $('#artists').html(memberStatus + associateStatus);
     });
+
 //********* click on artist to expand *********//
-    // $(".artist-name").click(function() {
-    //     var $box =  $(this).next(".hidden-profile");
-    //     if($box.is(":visible")){
-    //         $box.slideUp(500);
-    //         return;
-    //     }
-    //     var visibleBoxes = $('.hidden-profile:visible');
-    //     if (visibleBoxes.length > 0) {
-    //         $('.hidden-profile:visible').slideUp(500);
-    //     }
-    //     $box.slideDown(500);
-    // });
+    $(".artist-name").click(function() {
+        var $box =  $(this).next(".hidden-profile");
+        if($box.is(":visible")){
+            $box.slideUp(500);
+            return;
+        }
+        var visibleBoxes = $('.hidden-profile:visible');
+        if (visibleBoxes.length > 0) {
+            $('.hidden-profile:visible').slideUp(500);
+        }
+        $box.slideDown(500);
+    });
 //---------------------------------------------------
 // AJAX for members / Temp login
 //---------------------------------------------------
@@ -118,47 +124,86 @@ $(document).on('ready', function() {
         e.preventDefault();
         var name = $("input:text[name='name']").val();
         var pass = $("input:text[name='password']").val();
-        if( name === "pirate" && pass === "16") {
+        if( name === "1" && pass === "1") {
             $(".background").addClass('background-grey');
             $("#public").toggle();
             // ADD MEMBERS
             $("#members").load("../data/member.html", function(){
-                var mailTagStart = '<a href="mailto:info@pirateartonline.org?cc=';
-                var mailTagDirrectStart = '<a href="mailto:'
+                var statusHTML = '';
+
+                var mailTagStartArtist = '<a href="mailto:'
                 var mailTagEnd = '">';
                 var mailTagClose = '</a>';
+
                 var phoneTagStart = '<a href="tel:';
                 var phoneTagEnd = '">';
                 var phoneTagClose = '</a>';
-                var statusHTML = '';
+
                 $.getJSON(url, function (response) {
+//---------------------------------------------------
+// LOGGED IN - List of contacts
+//---------------------------------------------------
                     $.each(response, function (index, artist) {
                         if( artist.memberType === "Member") {
-                            statusHTML += '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
-                        } else {
-                            statusHTML +=  '<p>' + artist.firstName + artist.lastName + '<br>' + mailTagDirrectStart + artist.email + mailTagEnd + artist.email + mailTagClose + '<br>' + phoneTagStart + artist.phone + phoneTagEnd + artist.phone + phoneTagClose + '<br>' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
+                            if (artist.group === true) {
+                                statusHTML += '<p class="artist-contact">' + '<b>' + artist.firstName1 + ' ' + artist.lastName1 + '</b>' + '</p>';
+                                statusHTML += '<p class="artist-contact">' + mailTagStartArtist + artist.email1 + mailTagEnd + artist.email1 + mailTagClose + '</p>';
+                                statusHTML += '<p class="artist-contact">' + phoneTagStart + artist.phone1 + phoneTagEnd + artist.phone1 + phoneTagClose + '</p>';
+                                statusHTML += '<p class="artist-contact">' + '<b>' + artist.firstName2 + ' ' + artist.lastName2 + '</b>' + '</p>';
+                                statusHTML += '<p class="artist-contact">' + mailTagStartArtist + artist.email2 + mailTagEnd + artist.email2 + mailTagClose + '</p>';
+                                statusHTML += '<p class="artist-contact">' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
+                            } else {
+                                statusHTML += '<p class="artist-contact">' + '<b>' + artist.firstName1 + ' ' + artist.lastName1 + '</b>' + '</p>';
+                                statusHTML += '<p class="artist-contact">' + mailTagStartArtist + artist.email1 + mailTagEnd + artist.email1 + mailTagClose + '</p>';
+                                statusHTML += '<p class="artist-contact">' + phoneTagStart + artist.phone1 + phoneTagEnd + artist.phone1 + phoneTagClose + '</p>';
+                                statusHTML += '<p class="artist-contact">' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
+                            }
+                        }
+                        else {
+                            if (artist.group === true) {
+                                statusHTML += '<p class="artist-contact">' + '<b>' + artist.firstName1 + ' ' + artist.lastName1 + '</b>' + '</p>';
+                                statusHTML += '<p class="artist-contact">' + mailTagStartArtist + artist.email1 + mailTagEnd + artist.email1 + mailTagClose + '</p>';
+                                statusHTML += '<p class="artist-contact">' + phoneTagStart + artist.phone1 + phoneTagEnd + artist.phone1 + phoneTagClose + '</p>';
+                                statusHTML += '<p class="artist-contact">' + '<b>' + artist.firstName2 + ' ' + artist.lastName2 + '</b>' + '</p>';
+                                statusHTML += '<p class="artist-contact">' + mailTagStartArtist + artist.email2 + mailTagEnd + artist.email2 + mailTagClose + '</p>';
+                                statusHTML += '<p class="artist-contact">' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
+                            } else {
+                                statusHTML += '<p class="artist-contact">' + '<b>' + artist.firstName1 + ' ' + artist.lastName1 + '</b>' + '</p>';
+                                statusHTML += '<p class="artist-contact">' + mailTagStartArtist + artist.email1 + mailTagEnd + artist.email1 + mailTagClose + '</p>';
+                                statusHTML += '<p class="artist-contact">' + phoneTagStart + artist.phone1 + phoneTagEnd + artist.phone1 + phoneTagClose + '</p>';
+                                statusHTML += '<p class="artist-contact">' + phoneTagStart + artist.phone2 + phoneTagEnd + artist.phone2 + phoneTagClose + '</p>';
+                            }
                         }
                     });
                     $('#member-contact').html(statusHTML)
+                    $("a").each(function() {
+                        var href = $(this).attr("href");
+                        if(href === 'tel:empty') {
+                            $(this).remove();
+                        } else if (href === 'mailto:empty') {
+                            $(this).remove();
+                        }
+                    });
                 });
                 $.getJSON(url, function (response) {
+                    var mailTagStart = '<a href="mailto:info@pirateartonline.org?cc=';
                     var allList = '';
                     var memberList = '';
                     var associateList = '';
                     $.each(response, function (index, artist) {
-                        allList += artist.email + ',';
+                        allList += artist.email1 + ',';
                     });
                     removeFirstLast(allList);
-                    $("#email-all").html(mailTagStart + allList + '">Email ALL Pirates</a>');
+                    $("#email-all").html(mailTagStart + allList + '"><b>Email ALL Pirates</b></a>');
                     $.each(response, function (index, artist) {
                         if (artist.memberType === "Member") {
-                            memberList += artist.email + ',';
+                            memberList += artist.email1 + ',';
                             removeFirstLast(memberList);
-                            $('#email-members').html(mailTagStart + memberList + '">Email Members</a>')
+                            $('#email-members').html(mailTagStart + memberList + '"><b>Email Members</b></a>')
                         } else {
-                            associateList += artist.email + ',';
+                            associateList += artist.email1 + ',' + artist.email2 + ',';
                             removeFirstLast(associateList);
-                            $('#email-associates').html(mailTagStart + associateList + '">Email Associates</a>');
+                            $('#email-associates').html(mailTagStart + associateList + '"><b>Email Associates</b></a>');
                         }
                     });
                 });
@@ -180,6 +225,7 @@ $(document).on('ready', function() {
             $("#login-form").toggle();
         }
     });
+
     $("input:text").focus(function() {
       this.value = "";
     });
