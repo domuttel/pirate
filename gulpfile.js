@@ -25,7 +25,7 @@ var AUTOPREFIXER_BROWSERS = [
 // js/main.js -> production/app.js
 //=======================================
 gulp.task('concatScripts', function(){
-  return gulp.src(['js/main.js']) // <- add other js files in array
+  return gulp.src(['js/main.js', 'js/map.js']) // <- add other js files in array
   //concats files to one file
   .pipe(maps.init())
   .pipe(concat('app.js'))
