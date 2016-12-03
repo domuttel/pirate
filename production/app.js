@@ -1,10 +1,7 @@
-function removeFirstLast(string){
-    var firstChar = "";
-    var lastChar = "";
-    lastChar = string.slice(0, -1);
-    firstChar = lastChar.slice(1);
-    return firstChar;
-};
+function removeLast (string) {
+                str = string.slice(0, -1);
+                return str;
+            }
 $(document).on('ready', function() {
 
     $("input:button[name='juried']").click( function (e) {
@@ -124,7 +121,7 @@ $(document).on('ready', function() {
         e.preventDefault();
         var name = $("input:text[name='name']").val();
         var pass = $("input:text[name='password']").val();
-        if( name === "1" && pass === "1") {
+        if( name === "pirate" && pass === "16") {
             $(".background").addClass('background-grey');
             $("#public").toggle();
             // ADD MEMBERS
@@ -178,9 +175,9 @@ $(document).on('ready', function() {
                     $('#member-contact').html(statusHTML)
                     $("a").each(function() {
                         var href = $(this).attr("href");
-                        if(href === 'tel:empty') {
+                        if(href === 'tel:') {
                             $(this).remove();
-                        } else if (href === 'mailto:empty') {
+                        } else if (href === 'mailto:') {
                             $(this).remove();
                         }
                     });
@@ -192,17 +189,17 @@ $(document).on('ready', function() {
                     var associateList = '';
                     $.each(response, function (index, artist) {
                         allList += artist.email1 + ',';
+                        removeLast(allList);
                     });
-                    removeFirstLast(allList);
                     $("#email-all").html(mailTagStart + allList + '"><b>Email ALL Pirates</b></a>');
                     $.each(response, function (index, artist) {
                         if (artist.memberType === "Member") {
                             memberList += artist.email1 + ',';
-                            removeFirstLast(memberList);
+                            removeLast(memberList);
                             $('#email-members').html(mailTagStart + memberList + '"><b>Email Members</b></a>')
                         } else {
-                            associateList += artist.email1 + ',' + artist.email2 + ',';
-                            removeFirstLast(associateList);
+                            associateList += artist.email1 + ',';
+                            removeLast(associateList);
                             $('#email-associates').html(mailTagStart + associateList + '"><b>Email Associates</b></a>');
                         }
                     });
