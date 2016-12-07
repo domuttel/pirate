@@ -129,6 +129,13 @@
     },
     {
         "group": false,
+        "firstName1": "UCD",
+        "lastName1": "Sculpture Club",
+        "phone2": "",
+        "memberType": "Member"
+    },
+    {
+        "group": false,
         "firstName1": "Eric",
         "lastName1": "Anderson",
         "email1": "ericanderson602@gmail.com",
@@ -147,7 +154,7 @@
     },
     {
         "group": false,
-        "firstName1": "John",
+        "firstName1": "Johnathan",
         "lastName1": "Dow",
         "email1": "jonathan.dow3621@gmail.com",
         "phone1": "",
