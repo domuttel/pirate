@@ -1,7 +1,10 @@
 function removeLast (string) {
-                str = string.slice(0, -1);
-                return str;
-            }
+    str = string.slice(0, -1);
+    return str;
+};
+function falseDestroyer(){
+    return arr.filter(Boolean);
+};
 $(document).on('ready', function() {
 
     $("input:button[name='juried']").click( function (e) {
@@ -60,25 +63,31 @@ $(document).on('ready', function() {
 //---------------------------------------------------
     var url = "../data/artists.json";
     $.getJSON(url, function (response) {
+        ///////////////////////////////////
+        $.each(response, function (index, artist) {
+            console.log(typeof artist);
+            console.log(index + " : " + typeof artist.firstName1);
+        });
+        //////////////////////////////////
         var memberStatus = '<h2>ARTISTS</h2><h3><b>MEMBERS</b></h3>';
         var associateStatus = '<h3><b>ASSOCIATES</b></h3>';
         $.each(response, function (index, artist) {
             if( artist.memberType === "Member") {
                 if (artist.group === true){
                     memberStatus += '<div class="artist-profile columns seven">';
-                    memberStatus += '<h3>' + artist.firstName1 + ' ' + artist.lastName1 + ' / ' + artist.firstName2 + " " + artist.lastName2 + '</h3>';
+                    memberStatus += '<h3 class="artist-name">' + artist.firstName1 + ' ' + artist.lastName1 + ' / ' + artist.firstName2 + " " + artist.lastName2 + '</h3></div>';
                 } else {
                     memberStatus += '<div class="artist-profile columns seven">';
-                    memberStatus += '<h3>' + artist.firstName1 + ' ' + artist.lastName1 + '</h3>';
+                    memberStatus += '<h3 class="artist-name">' + artist.firstName1 + ' ' + artist.lastName1 + '</h3></div>';
                 }
             } else {
                 if(artist.group === true){
                     associateStatus += '<div class="artist-profile columns seven">';
-                    associateStatus += '<h3>' + artist.groupName + ': ';
-                    associateStatus += artist.firstName1 + ' ' + artist.lastName1 + ' / ' + artist.firstName2 + " " + artist.lastName2 + '</h3>';
+                    associateStatus += '<h3 class="artist-name">' + artist.groupName + ': ';
+                    associateStatus += artist.firstName1 + ' ' + artist.lastName1 + ' / ' + artist.firstName2 + " " + artist.lastName2 + '</h3></div>';
                 } else {
                     associateStatus += '<div class="artist-profile columns seven">';
-                    associateStatus += '<h3>' + artist.firstName1 + ' ' + artist.lastName1 + '</h3>';
+                    associateStatus += '<h3 class="artist-name">' + artist.firstName1 + ' ' + artist.lastName1 + '</h3></div>';
                 }
             }
         });
@@ -172,7 +181,7 @@ $(document).on('ready', function() {
                             }
                         }
                     });
-                    $('#member-contact').html(statusHTML)
+                    $('#member-contact').html(statusHTML);
                     $("a").each(function() {
                         var href = $(this).attr("href");
                         if(href === 'tel:') {
